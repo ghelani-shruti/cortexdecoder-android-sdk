@@ -1,0 +1,305 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1" charset="UTF-8">
+    <title>CDVerification</title>
+    <link href="../../../../images/logo-icon.svg" rel="icon" type="image/svg">
+    <script>var pathToRoot = "../../../../";</script>
+    <script>const storage = localStorage.getItem("dokka-dark-mode")
+    if (storage == null) {
+        const osDarkSchemePreferred = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches
+        if (osDarkSchemePreferred === true) {
+            document.getElementsByTagName("html")[0].classList.add("theme-dark")
+        }
+    } else {
+        const savedDarkMode = JSON.parse(storage)
+        if(savedDarkMode === true) {
+            document.getElementsByTagName("html")[0].classList.add("theme-dark")
+        }
+    }
+    </script>
+<script type="text/javascript" src="../../../../scripts/sourceset_dependencies.js" async="async"></script>
+<link href="../../../../styles/style.css" rel="Stylesheet">
+<link href="../../../../styles/jetbrains-mono.css" rel="Stylesheet">
+<link href="../../../../styles/main.css" rel="Stylesheet">
+<link href="../../../../styles/prism.css" rel="Stylesheet">
+<link href="../../../../styles/logo-styles.css" rel="Stylesheet">
+<script type="text/javascript" src="../../../../scripts/clipboard.js" async="async"></script>
+<script type="text/javascript" src="../../../../scripts/navigation-loader.js" async="async"></script>
+<script type="text/javascript" src="../../../../scripts/platform-content-handler.js" async="async"></script>
+<script type="text/javascript" src="../../../../scripts/main.js" defer="defer"></script>
+<script type="text/javascript" src="../../../../scripts/prism.js" async="async"></script>
+<script type="text/javascript" src="../../../../scripts/symbol-parameters-wrapper_deferred.js" defer="defer"></script>
+<link href="../../../../images/logo-icon.svg">
+<link href="../../../../styles/logo-styles.css" rel="Stylesheet">
+</head>
+<body>
+<div class="navigation-wrapper" id="navigation-wrapper">
+    <div id="leftToggler"><span class="icon-toggler"></span></div>
+    <div class="library-name">
+            <a href="../../../../index.html">
+                    <span>CortexDecoderLibrary</span>
+            </a>
+    </div>
+    <div>
+Version: 4.12.0    </div>
+    <div class="pull-right d-flex">
+        <button id="theme-toggle-button"><span id="theme-toggle"></span></button>
+        <div id="searchBar"></div>
+    </div>
+</div>
+<div id="container">
+    <div id="leftColumn">
+        <div id="sideMenu"></div>
+    </div>
+    <div id="main">
+<div class="main-content" id="content" pageIds="CortexDecoderLibrary::com.codecorp/CDResult.CDVerification///PointingToDeclaration//-876852797">
+  <div class="breadcrumbs"><a href="../../../../index.html">CortexDecoderLibrary</a><span class="delimiter">/</span><a href="../../index.html">com.codecorp</a><span class="delimiter">/</span><a href="../index.html">CDResult</a><span class="delimiter">/</span><span class="current">CDVerification</span></div>
+  <div class="cover ">
+    <h1 class="cover"><span><span>CDVerification</span></span></h1>
+    <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":CortexDecoderLibrary:dokkaHtml/testFixturesRelease"><div class="symbol monospace"><span class="token keyword">public </span><span class="token keyword">class </span><a href="index.html">CDVerification</a><span class="token keyword"> implements </span><a href="https://developer.android.com/reference/kotlin/java/io/Serializable.html">Serializable</a></div><p class="paragraph">CDVerification class is used to return barcode verification result. Currently, the decoder supports verification for Data Matrix and QR code barcodes. CDVerification object is returned as a part of the CDResult class. Following are the fields supported in CDVerification along with their data type:</p></div></div>
+  </div>
+  <div class="tabbedcontent">
+    <div class="tabs-section" tabs-section="tabs-section"><button class="section-tab" data-active="" data-togglable="Constructors">Constructors</button><button class="section-tab" data-togglable="Properties">Properties</button></div>
+    <div class="tabs-section-body">
+      <h2 class="tabbedcontent">Constructors</h2>
+      <div class="table" data-togglable="Constructors"><a data-name="-576112072%2FConstructors%2F-876852797" anchor-label="CDResult.CDVerification" id="-576112072%2FConstructors%2F-876852797" data-filterable-set=":CortexDecoderLibrary:dokkaHtml/testFixturesRelease"></a>
+        <div class="table-row" data-filterable-current=":CortexDecoderLibrary:dokkaHtml/testFixturesRelease" data-filterable-set=":CortexDecoderLibrary:dokkaHtml/testFixturesRelease">
+          <div class="main-subrow keyValue TabbedContent">
+            <div class=""><span class="inline-flex">
+                <div><a href="-c-d-result.-c-d-verification.html"><span>CDResult.</span><wbr></wbr><span><span>CDVerification</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-576112072%2FConstructors%2F-876852797"></span>
+                  <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                </span></span></div>
+            <div>
+              <div class="title">
+                <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":CortexDecoderLibrary:dokkaHtml/testFixturesRelease"><div class="symbol monospace block"><span class="token keyword">public </span><span class="token keyword"></span>void <a href="-c-d-result.-c-d-verification.html"><span class="token function">CDResult.CDVerification</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter "><span class="token keyword"></span>int gradeFinal<span class="token punctuation">, </span></span><span class="parameter "><span class="token keyword"></span>int gradeReferenceDecode<span class="token punctuation">, </span></span><span class="parameter "><span class="token keyword"></span>int gradeContrast<span class="token punctuation">, </span></span><span class="parameter "><span class="token keyword"></span>int scoreContrast<span class="token punctuation">, </span></span><span class="parameter "><span class="token keyword"></span>int gradeModulation<span class="token punctuation">, </span></span><span class="parameter "><span class="token keyword"></span>int gradeReflectanceMargin<span class="token punctuation">, </span></span><span class="parameter "><span class="token keyword"></span>int gradeFixedPatternDamage<span class="token punctuation">, </span></span><span class="parameter "><span class="token keyword"></span>int gradeAxialNonuniformity<span class="token punctuation">, </span></span><span class="parameter "><span class="token keyword"></span>int scoreAxialNonuniformity<span class="token punctuation">, </span></span><span class="parameter "><span class="token keyword"></span>int gradeGridNonuniformity<span class="token punctuation">, </span></span><span class="parameter "><span class="token keyword"></span>int scoreGridNonuniformity<span class="token punctuation">, </span></span><span class="parameter "><span class="token keyword"></span>int gradeUnusedErrorCorrect<span class="token punctuation">, </span></span><span class="parameter "><span class="token keyword"></span>int scoreUnusedErrorCorrect<span class="token punctuation">, </span></span><span class="parameter "><span class="token keyword"></span>int apertureSizeUsed</span></span><span class="token punctuation">)</span></div><div class="brief ">Default Constructor for CDVerification</div></div></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <h2 class="">Properties</h2>
+      <div class="table" data-togglable="Properties"><a data-name="925470945%2FProperties%2F-876852797" anchor-label="apertureSizeUsed" id="925470945%2FProperties%2F-876852797" data-filterable-set=":CortexDecoderLibrary:dokkaHtml/testFixturesRelease"></a>
+        <div class="table-row" data-filterable-current=":CortexDecoderLibrary:dokkaHtml/testFixturesRelease" data-filterable-set=":CortexDecoderLibrary:dokkaHtml/testFixturesRelease">
+          <div class="main-subrow keyValue ">
+            <div class=""><span class="inline-flex">
+                <div><a href="index.html#925470945%2FProperties%2F-876852797"><span>aperture</span><wbr></wbr><span>Size</span><wbr></wbr><span><span>Used</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="925470945%2FProperties%2F-876852797"></span>
+                  <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                </span></span></div>
+            <div>
+              <div class="title">
+                <div class="platform-hinted " data-platform-hinted="data-platform-hinted" data-togglable="Properties"><div class="content sourceset-dependent-content" data-active="" data-togglable=":CortexDecoderLibrary:dokkaHtml/testFixturesRelease"><a data-name="925470945%2FProperties%2F-876852797" anchor-label="apertureSizeUsed" id="925470945%2FProperties%2F-876852797" data-filterable-set=":CortexDecoderLibrary:dokkaHtml/testFixturesRelease"></a><div class="symbol monospace block"><span class="token keyword">public </span><span class="token keyword"></span>int <a href="index.html#925470945%2FProperties%2F-876852797">apertureSizeUsed</a></div><div class="brief "><a data-name="925470945%2FProperties%2F-876852797" anchor-label="apertureSizeUsed" id="925470945%2FProperties%2F-876852797" data-filterable-set=":CortexDecoderLibrary:dokkaHtml/testFixturesRelease"></a>apertureSizeUsed</div></div></div>
+              </div>
+            </div>
+          </div>
+        </div>
+<a data-name="1087816874%2FProperties%2F-876852797" anchor-label="gradeAxialNonuniformity" id="1087816874%2FProperties%2F-876852797" data-filterable-set=":CortexDecoderLibrary:dokkaHtml/testFixturesRelease"></a>
+        <div class="table-row" data-filterable-current=":CortexDecoderLibrary:dokkaHtml/testFixturesRelease" data-filterable-set=":CortexDecoderLibrary:dokkaHtml/testFixturesRelease">
+          <div class="main-subrow keyValue ">
+            <div class=""><span class="inline-flex">
+                <div><a href="index.html#1087816874%2FProperties%2F-876852797"><span>grade</span><wbr></wbr><span>Axial</span><wbr></wbr><span><span>Nonuniformity</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1087816874%2FProperties%2F-876852797"></span>
+                  <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                </span></span></div>
+            <div>
+              <div class="title">
+                <div class="platform-hinted " data-platform-hinted="data-platform-hinted" data-togglable="Properties"><div class="content sourceset-dependent-content" data-active="" data-togglable=":CortexDecoderLibrary:dokkaHtml/testFixturesRelease"><a data-name="1087816874%2FProperties%2F-876852797" anchor-label="gradeAxialNonuniformity" id="1087816874%2FProperties%2F-876852797" data-filterable-set=":CortexDecoderLibrary:dokkaHtml/testFixturesRelease"></a><div class="symbol monospace block"><span class="token keyword">public </span><span class="token keyword"></span>int <a href="index.html#1087816874%2FProperties%2F-876852797">gradeAxialNonuniformity</a></div><div class="brief "><a data-name="1087816874%2FProperties%2F-876852797" anchor-label="gradeAxialNonuniformity" id="1087816874%2FProperties%2F-876852797" data-filterable-set=":CortexDecoderLibrary:dokkaHtml/testFixturesRelease"></a>gradeAxialNonuniformity</div></div></div>
+              </div>
+            </div>
+          </div>
+        </div>
+<a data-name="-1797518670%2FProperties%2F-876852797" anchor-label="gradeContrast" id="-1797518670%2FProperties%2F-876852797" data-filterable-set=":CortexDecoderLibrary:dokkaHtml/testFixturesRelease"></a>
+        <div class="table-row" data-filterable-current=":CortexDecoderLibrary:dokkaHtml/testFixturesRelease" data-filterable-set=":CortexDecoderLibrary:dokkaHtml/testFixturesRelease">
+          <div class="main-subrow keyValue ">
+            <div class=""><span class="inline-flex">
+                <div><a href="index.html#-1797518670%2FProperties%2F-876852797"><span>grade</span><wbr></wbr><span><span>Contrast</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1797518670%2FProperties%2F-876852797"></span>
+                  <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                </span></span></div>
+            <div>
+              <div class="title">
+                <div class="platform-hinted " data-platform-hinted="data-platform-hinted" data-togglable="Properties"><div class="content sourceset-dependent-content" data-active="" data-togglable=":CortexDecoderLibrary:dokkaHtml/testFixturesRelease"><a data-name="-1797518670%2FProperties%2F-876852797" anchor-label="gradeContrast" id="-1797518670%2FProperties%2F-876852797" data-filterable-set=":CortexDecoderLibrary:dokkaHtml/testFixturesRelease"></a><div class="symbol monospace block"><span class="token keyword">public </span><span class="token keyword"></span>int <a href="index.html#-1797518670%2FProperties%2F-876852797">gradeContrast</a></div><div class="brief "><a data-name="-1797518670%2FProperties%2F-876852797" anchor-label="gradeContrast" id="-1797518670%2FProperties%2F-876852797" data-filterable-set=":CortexDecoderLibrary:dokkaHtml/testFixturesRelease"></a>gradeContrast</div></div></div>
+              </div>
+            </div>
+          </div>
+        </div>
+<a data-name="-1113763152%2FProperties%2F-876852797" anchor-label="gradeFinal" id="-1113763152%2FProperties%2F-876852797" data-filterable-set=":CortexDecoderLibrary:dokkaHtml/testFixturesRelease"></a>
+        <div class="table-row" data-filterable-current=":CortexDecoderLibrary:dokkaHtml/testFixturesRelease" data-filterable-set=":CortexDecoderLibrary:dokkaHtml/testFixturesRelease">
+          <div class="main-subrow keyValue ">
+            <div class=""><span class="inline-flex">
+                <div><a href="index.html#-1113763152%2FProperties%2F-876852797"><span>grade</span><wbr></wbr><span><span>Final</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1113763152%2FProperties%2F-876852797"></span>
+                  <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                </span></span></div>
+            <div>
+              <div class="title">
+                <div class="platform-hinted " data-platform-hinted="data-platform-hinted" data-togglable="Properties"><div class="content sourceset-dependent-content" data-active="" data-togglable=":CortexDecoderLibrary:dokkaHtml/testFixturesRelease"><a data-name="-1113763152%2FProperties%2F-876852797" anchor-label="gradeFinal" id="-1113763152%2FProperties%2F-876852797" data-filterable-set=":CortexDecoderLibrary:dokkaHtml/testFixturesRelease"></a><div class="symbol monospace block"><span class="token keyword">public </span><span class="token keyword"></span>int <a href="index.html#-1113763152%2FProperties%2F-876852797">gradeFinal</a></div><div class="brief "><a data-name="-1113763152%2FProperties%2F-876852797" anchor-label="gradeFinal" id="-1113763152%2FProperties%2F-876852797" data-filterable-set=":CortexDecoderLibrary:dokkaHtml/testFixturesRelease"></a>gradeFinal</div></div></div>
+              </div>
+            </div>
+          </div>
+        </div>
+<a data-name="82097417%2FProperties%2F-876852797" anchor-label="gradeFixedPatternDamage" id="82097417%2FProperties%2F-876852797" data-filterable-set=":CortexDecoderLibrary:dokkaHtml/testFixturesRelease"></a>
+        <div class="table-row" data-filterable-current=":CortexDecoderLibrary:dokkaHtml/testFixturesRelease" data-filterable-set=":CortexDecoderLibrary:dokkaHtml/testFixturesRelease">
+          <div class="main-subrow keyValue ">
+            <div class=""><span class="inline-flex">
+                <div><a href="index.html#82097417%2FProperties%2F-876852797"><span>grade</span><wbr></wbr><span>Fixed</span><wbr></wbr><span>Pattern</span><wbr></wbr><span><span>Damage</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="82097417%2FProperties%2F-876852797"></span>
+                  <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                </span></span></div>
+            <div>
+              <div class="title">
+                <div class="platform-hinted " data-platform-hinted="data-platform-hinted" data-togglable="Properties"><div class="content sourceset-dependent-content" data-active="" data-togglable=":CortexDecoderLibrary:dokkaHtml/testFixturesRelease"><a data-name="82097417%2FProperties%2F-876852797" anchor-label="gradeFixedPatternDamage" id="82097417%2FProperties%2F-876852797" data-filterable-set=":CortexDecoderLibrary:dokkaHtml/testFixturesRelease"></a><div class="symbol monospace block"><span class="token keyword">public </span><span class="token keyword"></span>int <a href="index.html#82097417%2FProperties%2F-876852797">gradeFixedPatternDamage</a></div><div class="brief "><a data-name="82097417%2FProperties%2F-876852797" anchor-label="gradeFixedPatternDamage" id="82097417%2FProperties%2F-876852797" data-filterable-set=":CortexDecoderLibrary:dokkaHtml/testFixturesRelease"></a>gradeFixedPatternDamage</div></div></div>
+              </div>
+            </div>
+          </div>
+        </div>
+<a data-name="487515557%2FProperties%2F-876852797" anchor-label="gradeGridNonuniformity" id="487515557%2FProperties%2F-876852797" data-filterable-set=":CortexDecoderLibrary:dokkaHtml/testFixturesRelease"></a>
+        <div class="table-row" data-filterable-current=":CortexDecoderLibrary:dokkaHtml/testFixturesRelease" data-filterable-set=":CortexDecoderLibrary:dokkaHtml/testFixturesRelease">
+          <div class="main-subrow keyValue ">
+            <div class=""><span class="inline-flex">
+                <div><a href="index.html#487515557%2FProperties%2F-876852797"><span>grade</span><wbr></wbr><span>Grid</span><wbr></wbr><span><span>Nonuniformity</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="487515557%2FProperties%2F-876852797"></span>
+                  <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                </span></span></div>
+            <div>
+              <div class="title">
+                <div class="platform-hinted " data-platform-hinted="data-platform-hinted" data-togglable="Properties"><div class="content sourceset-dependent-content" data-active="" data-togglable=":CortexDecoderLibrary:dokkaHtml/testFixturesRelease"><a data-name="487515557%2FProperties%2F-876852797" anchor-label="gradeGridNonuniformity" id="487515557%2FProperties%2F-876852797" data-filterable-set=":CortexDecoderLibrary:dokkaHtml/testFixturesRelease"></a><div class="symbol monospace block"><span class="token keyword">public </span><span class="token keyword"></span>int <a href="index.html#487515557%2FProperties%2F-876852797">gradeGridNonuniformity</a></div><div class="brief "><a data-name="487515557%2FProperties%2F-876852797" anchor-label="gradeGridNonuniformity" id="487515557%2FProperties%2F-876852797" data-filterable-set=":CortexDecoderLibrary:dokkaHtml/testFixturesRelease"></a>gradeGridNonuniformity</div></div></div>
+              </div>
+            </div>
+          </div>
+        </div>
+<a data-name="-2147458120%2FProperties%2F-876852797" anchor-label="gradeModulation" id="-2147458120%2FProperties%2F-876852797" data-filterable-set=":CortexDecoderLibrary:dokkaHtml/testFixturesRelease"></a>
+        <div class="table-row" data-filterable-current=":CortexDecoderLibrary:dokkaHtml/testFixturesRelease" data-filterable-set=":CortexDecoderLibrary:dokkaHtml/testFixturesRelease">
+          <div class="main-subrow keyValue ">
+            <div class=""><span class="inline-flex">
+                <div><a href="index.html#-2147458120%2FProperties%2F-876852797"><span>grade</span><wbr></wbr><span><span>Modulation</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-2147458120%2FProperties%2F-876852797"></span>
+                  <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                </span></span></div>
+            <div>
+              <div class="title">
+                <div class="platform-hinted " data-platform-hinted="data-platform-hinted" data-togglable="Properties"><div class="content sourceset-dependent-content" data-active="" data-togglable=":CortexDecoderLibrary:dokkaHtml/testFixturesRelease"><a data-name="-2147458120%2FProperties%2F-876852797" anchor-label="gradeModulation" id="-2147458120%2FProperties%2F-876852797" data-filterable-set=":CortexDecoderLibrary:dokkaHtml/testFixturesRelease"></a><div class="symbol monospace block"><span class="token keyword">public </span><span class="token keyword"></span>int <a href="index.html#-2147458120%2FProperties%2F-876852797">gradeModulation</a></div><div class="brief "><a data-name="-2147458120%2FProperties%2F-876852797" anchor-label="gradeModulation" id="-2147458120%2FProperties%2F-876852797" data-filterable-set=":CortexDecoderLibrary:dokkaHtml/testFixturesRelease"></a>gradeModulation</div></div></div>
+              </div>
+            </div>
+          </div>
+        </div>
+<a data-name="-765441747%2FProperties%2F-876852797" anchor-label="gradeReferenceDecode" id="-765441747%2FProperties%2F-876852797" data-filterable-set=":CortexDecoderLibrary:dokkaHtml/testFixturesRelease"></a>
+        <div class="table-row" data-filterable-current=":CortexDecoderLibrary:dokkaHtml/testFixturesRelease" data-filterable-set=":CortexDecoderLibrary:dokkaHtml/testFixturesRelease">
+          <div class="main-subrow keyValue ">
+            <div class=""><span class="inline-flex">
+                <div><a href="index.html#-765441747%2FProperties%2F-876852797"><span>grade</span><wbr></wbr><span>Reference</span><wbr></wbr><span><span>Decode</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-765441747%2FProperties%2F-876852797"></span>
+                  <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                </span></span></div>
+            <div>
+              <div class="title">
+                <div class="platform-hinted " data-platform-hinted="data-platform-hinted" data-togglable="Properties"><div class="content sourceset-dependent-content" data-active="" data-togglable=":CortexDecoderLibrary:dokkaHtml/testFixturesRelease"><a data-name="-765441747%2FProperties%2F-876852797" anchor-label="gradeReferenceDecode" id="-765441747%2FProperties%2F-876852797" data-filterable-set=":CortexDecoderLibrary:dokkaHtml/testFixturesRelease"></a><div class="symbol monospace block"><span class="token keyword">public </span><span class="token keyword"></span>int <a href="index.html#-765441747%2FProperties%2F-876852797">gradeReferenceDecode</a></div><div class="brief "><a data-name="-765441747%2FProperties%2F-876852797" anchor-label="gradeReferenceDecode" id="-765441747%2FProperties%2F-876852797" data-filterable-set=":CortexDecoderLibrary:dokkaHtml/testFixturesRelease"></a>gradeReferenceDecode</div></div></div>
+              </div>
+            </div>
+          </div>
+        </div>
+<a data-name="612949196%2FProperties%2F-876852797" anchor-label="gradeReflectanceMargin" id="612949196%2FProperties%2F-876852797" data-filterable-set=":CortexDecoderLibrary:dokkaHtml/testFixturesRelease"></a>
+        <div class="table-row" data-filterable-current=":CortexDecoderLibrary:dokkaHtml/testFixturesRelease" data-filterable-set=":CortexDecoderLibrary:dokkaHtml/testFixturesRelease">
+          <div class="main-subrow keyValue ">
+            <div class=""><span class="inline-flex">
+                <div><a href="index.html#612949196%2FProperties%2F-876852797"><span>grade</span><wbr></wbr><span>Reflectance</span><wbr></wbr><span><span>Margin</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="612949196%2FProperties%2F-876852797"></span>
+                  <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                </span></span></div>
+            <div>
+              <div class="title">
+                <div class="platform-hinted " data-platform-hinted="data-platform-hinted" data-togglable="Properties"><div class="content sourceset-dependent-content" data-active="" data-togglable=":CortexDecoderLibrary:dokkaHtml/testFixturesRelease"><a data-name="612949196%2FProperties%2F-876852797" anchor-label="gradeReflectanceMargin" id="612949196%2FProperties%2F-876852797" data-filterable-set=":CortexDecoderLibrary:dokkaHtml/testFixturesRelease"></a><div class="symbol monospace block"><span class="token keyword">public </span><span class="token keyword"></span>int <a href="index.html#612949196%2FProperties%2F-876852797">gradeReflectanceMargin</a></div><div class="brief "><a data-name="612949196%2FProperties%2F-876852797" anchor-label="gradeReflectanceMargin" id="612949196%2FProperties%2F-876852797" data-filterable-set=":CortexDecoderLibrary:dokkaHtml/testFixturesRelease"></a>gradeReflectanceMargin</div></div></div>
+              </div>
+            </div>
+          </div>
+        </div>
+<a data-name="392179580%2FProperties%2F-876852797" anchor-label="gradeUnusedErrorCorrect" id="392179580%2FProperties%2F-876852797" data-filterable-set=":CortexDecoderLibrary:dokkaHtml/testFixturesRelease"></a>
+        <div class="table-row" data-filterable-current=":CortexDecoderLibrary:dokkaHtml/testFixturesRelease" data-filterable-set=":CortexDecoderLibrary:dokkaHtml/testFixturesRelease">
+          <div class="main-subrow keyValue ">
+            <div class=""><span class="inline-flex">
+                <div><a href="index.html#392179580%2FProperties%2F-876852797"><span>grade</span><wbr></wbr><span>Unused</span><wbr></wbr><span>Error</span><wbr></wbr><span><span>Correct</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="392179580%2FProperties%2F-876852797"></span>
+                  <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                </span></span></div>
+            <div>
+              <div class="title">
+                <div class="platform-hinted " data-platform-hinted="data-platform-hinted" data-togglable="Properties"><div class="content sourceset-dependent-content" data-active="" data-togglable=":CortexDecoderLibrary:dokkaHtml/testFixturesRelease"><a data-name="392179580%2FProperties%2F-876852797" anchor-label="gradeUnusedErrorCorrect" id="392179580%2FProperties%2F-876852797" data-filterable-set=":CortexDecoderLibrary:dokkaHtml/testFixturesRelease"></a><div class="symbol monospace block"><span class="token keyword">public </span><span class="token keyword"></span>int <a href="index.html#392179580%2FProperties%2F-876852797">gradeUnusedErrorCorrect</a></div><div class="brief "><a data-name="392179580%2FProperties%2F-876852797" anchor-label="gradeUnusedErrorCorrect" id="392179580%2FProperties%2F-876852797" data-filterable-set=":CortexDecoderLibrary:dokkaHtml/testFixturesRelease"></a>gradeUnusedErrorCorrect</div></div></div>
+              </div>
+            </div>
+          </div>
+        </div>
+<a data-name="-1383956721%2FProperties%2F-876852797" anchor-label="scoreAxialNonuniformity" id="-1383956721%2FProperties%2F-876852797" data-filterable-set=":CortexDecoderLibrary:dokkaHtml/testFixturesRelease"></a>
+        <div class="table-row" data-filterable-current=":CortexDecoderLibrary:dokkaHtml/testFixturesRelease" data-filterable-set=":CortexDecoderLibrary:dokkaHtml/testFixturesRelease">
+          <div class="main-subrow keyValue ">
+            <div class=""><span class="inline-flex">
+                <div><a href="index.html#-1383956721%2FProperties%2F-876852797"><span>score</span><wbr></wbr><span>Axial</span><wbr></wbr><span><span>Nonuniformity</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1383956721%2FProperties%2F-876852797"></span>
+                  <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                </span></span></div>
+            <div>
+              <div class="title">
+                <div class="platform-hinted " data-platform-hinted="data-platform-hinted" data-togglable="Properties"><div class="content sourceset-dependent-content" data-active="" data-togglable=":CortexDecoderLibrary:dokkaHtml/testFixturesRelease"><a data-name="-1383956721%2FProperties%2F-876852797" anchor-label="scoreAxialNonuniformity" id="-1383956721%2FProperties%2F-876852797" data-filterable-set=":CortexDecoderLibrary:dokkaHtml/testFixturesRelease"></a><div class="symbol monospace block"><span class="token keyword">public </span><span class="token keyword"></span>int <a href="index.html#-1383956721%2FProperties%2F-876852797">scoreAxialNonuniformity</a></div><div class="brief "><a data-name="-1383956721%2FProperties%2F-876852797" anchor-label="scoreAxialNonuniformity" id="-1383956721%2FProperties%2F-876852797" data-filterable-set=":CortexDecoderLibrary:dokkaHtml/testFixturesRelease"></a>scoreAxialNonuniformity</div></div></div>
+              </div>
+            </div>
+          </div>
+        </div>
+<a data-name="-113930409%2FProperties%2F-876852797" anchor-label="scoreContrast" id="-113930409%2FProperties%2F-876852797" data-filterable-set=":CortexDecoderLibrary:dokkaHtml/testFixturesRelease"></a>
+        <div class="table-row" data-filterable-current=":CortexDecoderLibrary:dokkaHtml/testFixturesRelease" data-filterable-set=":CortexDecoderLibrary:dokkaHtml/testFixturesRelease">
+          <div class="main-subrow keyValue ">
+            <div class=""><span class="inline-flex">
+                <div><a href="index.html#-113930409%2FProperties%2F-876852797"><span>score</span><wbr></wbr><span><span>Contrast</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-113930409%2FProperties%2F-876852797"></span>
+                  <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                </span></span></div>
+            <div>
+              <div class="title">
+                <div class="platform-hinted " data-platform-hinted="data-platform-hinted" data-togglable="Properties"><div class="content sourceset-dependent-content" data-active="" data-togglable=":CortexDecoderLibrary:dokkaHtml/testFixturesRelease"><a data-name="-113930409%2FProperties%2F-876852797" anchor-label="scoreContrast" id="-113930409%2FProperties%2F-876852797" data-filterable-set=":CortexDecoderLibrary:dokkaHtml/testFixturesRelease"></a><div class="symbol monospace block"><span class="token keyword">public </span><span class="token keyword"></span>int <a href="index.html#-113930409%2FProperties%2F-876852797">scoreContrast</a></div><div class="brief "><a data-name="-113930409%2FProperties%2F-876852797" anchor-label="scoreContrast" id="-113930409%2FProperties%2F-876852797" data-filterable-set=":CortexDecoderLibrary:dokkaHtml/testFixturesRelease"></a>scoreContrast</div></div></div>
+              </div>
+            </div>
+          </div>
+        </div>
+<a data-name="-562050400%2FProperties%2F-876852797" anchor-label="scoreGridNonuniformity" id="-562050400%2FProperties%2F-876852797" data-filterable-set=":CortexDecoderLibrary:dokkaHtml/testFixturesRelease"></a>
+        <div class="table-row" data-filterable-current=":CortexDecoderLibrary:dokkaHtml/testFixturesRelease" data-filterable-set=":CortexDecoderLibrary:dokkaHtml/testFixturesRelease">
+          <div class="main-subrow keyValue ">
+            <div class=""><span class="inline-flex">
+                <div><a href="index.html#-562050400%2FProperties%2F-876852797"><span>score</span><wbr></wbr><span>Grid</span><wbr></wbr><span><span>Nonuniformity</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-562050400%2FProperties%2F-876852797"></span>
+                  <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                </span></span></div>
+            <div>
+              <div class="title">
+                <div class="platform-hinted " data-platform-hinted="data-platform-hinted" data-togglable="Properties"><div class="content sourceset-dependent-content" data-active="" data-togglable=":CortexDecoderLibrary:dokkaHtml/testFixturesRelease"><a data-name="-562050400%2FProperties%2F-876852797" anchor-label="scoreGridNonuniformity" id="-562050400%2FProperties%2F-876852797" data-filterable-set=":CortexDecoderLibrary:dokkaHtml/testFixturesRelease"></a><div class="symbol monospace block"><span class="token keyword">public </span><span class="token keyword"></span>int <a href="index.html#-562050400%2FProperties%2F-876852797">scoreGridNonuniformity</a></div><div class="brief "><a data-name="-562050400%2FProperties%2F-876852797" anchor-label="scoreGridNonuniformity" id="-562050400%2FProperties%2F-876852797" data-filterable-set=":CortexDecoderLibrary:dokkaHtml/testFixturesRelease"></a>scoreGridNonuniformity</div></div></div>
+              </div>
+            </div>
+          </div>
+        </div>
+<a data-name="-2079594015%2FProperties%2F-876852797" anchor-label="scoreUnusedErrorCorrect" id="-2079594015%2FProperties%2F-876852797" data-filterable-set=":CortexDecoderLibrary:dokkaHtml/testFixturesRelease"></a>
+        <div class="table-row" data-filterable-current=":CortexDecoderLibrary:dokkaHtml/testFixturesRelease" data-filterable-set=":CortexDecoderLibrary:dokkaHtml/testFixturesRelease">
+          <div class="main-subrow keyValue ">
+            <div class=""><span class="inline-flex">
+                <div><a href="index.html#-2079594015%2FProperties%2F-876852797"><span>score</span><wbr></wbr><span>Unused</span><wbr></wbr><span>Error</span><wbr></wbr><span><span>Correct</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-2079594015%2FProperties%2F-876852797"></span>
+                  <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                </span></span></div>
+            <div>
+              <div class="title">
+                <div class="platform-hinted " data-platform-hinted="data-platform-hinted" data-togglable="Properties"><div class="content sourceset-dependent-content" data-active="" data-togglable=":CortexDecoderLibrary:dokkaHtml/testFixturesRelease"><a data-name="-2079594015%2FProperties%2F-876852797" anchor-label="scoreUnusedErrorCorrect" id="-2079594015%2FProperties%2F-876852797" data-filterable-set=":CortexDecoderLibrary:dokkaHtml/testFixturesRelease"></a><div class="symbol monospace block"><span class="token keyword">public </span><span class="token keyword"></span>int <a href="index.html#-2079594015%2FProperties%2F-876852797">scoreUnusedErrorCorrect</a></div><div class="brief "><a data-name="-2079594015%2FProperties%2F-876852797" anchor-label="scoreUnusedErrorCorrect" id="-2079594015%2FProperties%2F-876852797" data-filterable-set=":CortexDecoderLibrary:dokkaHtml/testFixturesRelease"></a>scoreUnusedErrorCorrect</div></div></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      <div class="footer">
+        <span class="go-to-top-icon"><a href="#content" id="go-to-top-link"></a></span><span>Copyright (c) 2014-2023 The Code Corporation. All rights reserved.</span><span
+                class="pull-right"><span>Generated by </span><a
+                href="https://github.com/Kotlin/dokka"><span>dokka</span><span class="padded-icon"></span></a></span>
+      </div>
+    </div>
+</div>
+</body>
+</html>

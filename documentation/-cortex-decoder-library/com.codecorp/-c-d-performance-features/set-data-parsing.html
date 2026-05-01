@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1" charset="UTF-8">
+    <title>setDataParsing</title>
+    <link href="../../../images/logo-icon.svg" rel="icon" type="image/svg">
+    <script>var pathToRoot = "../../../";</script>
+    <script>const storage = localStorage.getItem("dokka-dark-mode")
+    if (storage == null) {
+        const osDarkSchemePreferred = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches
+        if (osDarkSchemePreferred === true) {
+            document.getElementsByTagName("html")[0].classList.add("theme-dark")
+        }
+    } else {
+        const savedDarkMode = JSON.parse(storage)
+        if(savedDarkMode === true) {
+            document.getElementsByTagName("html")[0].classList.add("theme-dark")
+        }
+    }
+    </script>
+<script type="text/javascript" src="../../../scripts/sourceset_dependencies.js" async="async"></script>
+<link href="../../../styles/style.css" rel="Stylesheet">
+<link href="../../../styles/jetbrains-mono.css" rel="Stylesheet">
+<link href="../../../styles/main.css" rel="Stylesheet">
+<link href="../../../styles/prism.css" rel="Stylesheet">
+<link href="../../../styles/logo-styles.css" rel="Stylesheet">
+<script type="text/javascript" src="../../../scripts/clipboard.js" async="async"></script>
+<script type="text/javascript" src="../../../scripts/navigation-loader.js" async="async"></script>
+<script type="text/javascript" src="../../../scripts/platform-content-handler.js" async="async"></script>
+<script type="text/javascript" src="../../../scripts/main.js" defer="defer"></script>
+<script type="text/javascript" src="../../../scripts/prism.js" async="async"></script>
+<script type="text/javascript" src="../../../scripts/symbol-parameters-wrapper_deferred.js" defer="defer"></script>
+<link href="../../../images/logo-icon.svg">
+<link href="../../../styles/logo-styles.css" rel="Stylesheet">
+</head>
+<body>
+<div class="navigation-wrapper" id="navigation-wrapper">
+    <div id="leftToggler"><span class="icon-toggler"></span></div>
+    <div class="library-name">
+            <a href="../../../index.html">
+                    <span>CortexDecoderLibrary</span>
+            </a>
+    </div>
+    <div>
+Version: 4.12.0    </div>
+    <div class="pull-right d-flex">
+        <button id="theme-toggle-button"><span id="theme-toggle"></span></button>
+        <div id="searchBar"></div>
+    </div>
+</div>
+<div id="container">
+    <div id="leftColumn">
+        <div id="sideMenu"></div>
+    </div>
+    <div id="main">
+<div class="main-content" id="content" pageIds="CortexDecoderLibrary::com.codecorp/CDPerformanceFeatures/setDataParsing/#com.codecorp.CDPerformanceFeatures.CDDataParsing#java.lang.String/PointingToDeclaration//-876852797">
+  <div class="breadcrumbs"><a href="../../../index.html">CortexDecoderLibrary</a><span class="delimiter">/</span><a href="../index.html">com.codecorp</a><span class="delimiter">/</span><a href="index.html">CDPerformanceFeatures</a><span class="delimiter">/</span><span class="current">setDataParsing</span></div>
+  <div class="cover ">
+    <h1 class="cover"><span>set</span><wbr></wbr><span>Data</span><wbr></wbr><span><span>Parsing</span></span></h1>
+  </div>
+  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":CortexDecoderLibrary:dokkaHtml/testFixturesRelease"><div class="symbol monospace block"><span class="token keyword">public </span><span class="token keyword"></span>void <a href="set-data-parsing.html"><span class="token function">setDataParsing</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter "><span class="token keyword"></span><a href="-c-d-data-parsing/index.html">CDPerformanceFeatures.CDDataParsing</a> parsingType<span class="token punctuation">, </span></span><span class="parameter "><span class="token keyword"></span><a href="https://developer.android.com/reference/kotlin/java/lang/String.html">String</a> configStr</span></span><span class="token punctuation">)</span></div><p class="paragraph">setDataParsing is used to select a Data Parsing option. By default, Data Parsing is <a href="-c-d-data-parsing/disable/index.html">disable</a>. </p><div class="sample-container"><pre><code class="block lang-kotlin" theme="idea"><strong>Sample usage</strong><div class="sample-container"><pre><code class="block lang-kotlin" theme="idea">//disable
+CDPerformanceFeatures.shared.setDataParsing(CDPerformanceFeatures.CDDataParsing.disable,&quot;&quot;);
+//dlParsing
+CDPerformanceFeatures.shared.setDataParsing(CDPerformanceFeatures.CDDataParsing.dlParsing,&quot;00000308130328130331091845584578130648320668320678320681010&quot;);
+//strMatchReplace
+CDPerformanceFeatures.shared.setDataParsing(CDPerformanceFeatures.CDDataParsing.strMatchReplace,&quot;00+_aI+_aI!,,|12^0OK:^B019\\x01@&quot;);
+//gs1Parsing
+CDPerformanceFeatures.shared.setDataParsing(CDPerformanceFeatures.CDDataParsing.gs1Parsing,&quot;00+_aI+_aI|;^3^C#/0D016\\x01@&quot;);
+//isoParsing
+CDPerformanceFeatures.shared.setDataParsing(CDPerformanceFeatures.CDDataParsing.isoParsing,&quot;00+_aI+_aI00C\\x01@&quot;);
+//udiParsing
+CDPerformanceFeatures.shared.setDataParsing(CDPerformanceFeatures.CDDataParsing.udiParsing,&quot;00+_aI+_aI00C\\x01@&quot;);
+//jsonParsing
+CDPerformanceFeatures.shared.setDataParsing(CDPerformanceFeatures.CDDataParsing.jsonParsing,&quot;00000308130328130331091845584578130648320668320678320681010&quot;);
+</code></pre><span class="top-right-position"><span class="copy-icon"></span><div class="copy-popup-wrapper popup-to-left"><span class="copy-popup-icon"></span><span>Content copied to clipboard</span></div></span></div></code></pre><span class="top-right-position"><span class="copy-icon"></span><div class="copy-popup-wrapper popup-to-left"><span class="copy-popup-icon"></span><span>Content copied to clipboard</span></div></span></div><h4 class="">See also</h4><div data-togglable="See also"><div class="table" data-togglable="See also"><div class="table-row" data-filterable-current=":CortexDecoderLibrary:dokkaHtml/testFixturesRelease" data-filterable-set=":CortexDecoderLibrary:dokkaHtml/testFixturesRelease"><div class="main-subrow keyValue WithExtraAttributes"><div class=""><span class="inline-flex"><div><a href="get-data-parsing.html"><span>get</span><wbr></wbr><span>Data</span><wbr></wbr><span><span>Parsing()</span></span></a></div></span></div><div><div class="title"><div data-togglable="See also"><p class="paragraph">getDataParsing returns the Data Parsing type that is currently being used.</p></div></div></div></div></div><div class="table-row" data-filterable-current=":CortexDecoderLibrary:dokkaHtml/testFixturesRelease" data-filterable-set=":CortexDecoderLibrary:dokkaHtml/testFixturesRelease"><div class="main-subrow keyValue WithExtraAttributes"><div class=""><span class="inline-flex"><div><a href="get-config-string-for-data-parsing.html"><span>get</span><wbr></wbr><span>Config</span><wbr></wbr><span>String</span><wbr></wbr><span>For</span><wbr></wbr><span>Data</span><wbr></wbr><span>Parsing(CDData</span><wbr></wbr><span><span>Parsing)</span></span></a></div></span></div><div><div class="title"><div data-togglable="See also"><p class="paragraph">getConfigStringForDataParsing retrieves the configuration string used for <a href="-c-d-data-parsing/index.html">CDDataParsing</a> which was passed in the setDataParsing method.</p></div></div></div></div></div></div></div><h4 class="">Parameters</h4><div data-togglable="Parameters"><div class="table" data-togglable="Parameters"><div class="table-row" data-filterable-current=":CortexDecoderLibrary:dokkaHtml/testFixturesRelease" data-filterable-set=":CortexDecoderLibrary:dokkaHtml/testFixturesRelease"><div class="main-subrow keyValue WithExtraAttributes"><div class=""><span class="inline-flex"><div><u><span>parsing</span><wbr></wbr><span><span>Type</span></span></u></div></span></div><div><div class="title"><div data-togglable="Parameters"><p class="paragraph">Indicate to <a href="-c-d-data-parsing/index.html">CDDataParsing</a> type to be used.</p></div></div></div></div></div><div class="table-row" data-filterable-current=":CortexDecoderLibrary:dokkaHtml/testFixturesRelease" data-filterable-set=":CortexDecoderLibrary:dokkaHtml/testFixturesRelease"><div class="main-subrow keyValue WithExtraAttributes"><div class=""><span class="inline-flex"><div><u><span>config</span><wbr></wbr><span><span>Str</span></span></u></div></span></div><div><div class="title"><div data-togglable="Parameters"><p class="paragraph">Provides the configuration string for the data parsing type selected. Null can be passed if <a href="-c-d-data-parsing/index.html">CDDataParsing</a> has to be disable.</p></div></div></div></div></div></div></div></div></div>
+</div>
+      <div class="footer">
+        <span class="go-to-top-icon"><a href="#content" id="go-to-top-link"></a></span><span>Copyright (c) 2014-2023 The Code Corporation. All rights reserved.</span><span
+                class="pull-right"><span>Generated by </span><a
+                href="https://github.com/Kotlin/dokka"><span>dokka</span><span class="padded-icon"></span></a></span>
+      </div>
+    </div>
+</div>
+</body>
+</html>

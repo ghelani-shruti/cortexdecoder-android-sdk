@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">CortexDecoder ImageScan Sample</string>
+    <string name="title_activity_activate_license">ActivateLicenseActivity</string>
+    <string name="title_activity_home">HomeActivity</string>
+    <string name="barcode_result">Barcode Result</string>
+    <string name="title_activity_image_scan">ImageScanActivity</string>
+</resources>

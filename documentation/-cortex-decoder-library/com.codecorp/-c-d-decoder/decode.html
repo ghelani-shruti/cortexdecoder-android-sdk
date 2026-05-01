@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1" charset="UTF-8">
+    <title>decode</title>
+    <link href="../../../images/logo-icon.svg" rel="icon" type="image/svg">
+    <script>var pathToRoot = "../../../";</script>
+    <script>const storage = localStorage.getItem("dokka-dark-mode")
+    if (storage == null) {
+        const osDarkSchemePreferred = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches
+        if (osDarkSchemePreferred === true) {
+            document.getElementsByTagName("html")[0].classList.add("theme-dark")
+        }
+    } else {
+        const savedDarkMode = JSON.parse(storage)
+        if(savedDarkMode === true) {
+            document.getElementsByTagName("html")[0].classList.add("theme-dark")
+        }
+    }
+    </script>
+<script type="text/javascript" src="../../../scripts/sourceset_dependencies.js" async="async"></script>
+<link href="../../../styles/style.css" rel="Stylesheet">
+<link href="../../../styles/jetbrains-mono.css" rel="Stylesheet">
+<link href="../../../styles/main.css" rel="Stylesheet">
+<link href="../../../styles/prism.css" rel="Stylesheet">
+<link href="../../../styles/logo-styles.css" rel="Stylesheet">
+<script type="text/javascript" src="../../../scripts/clipboard.js" async="async"></script>
+<script type="text/javascript" src="../../../scripts/navigation-loader.js" async="async"></script>
+<script type="text/javascript" src="../../../scripts/platform-content-handler.js" async="async"></script>
+<script type="text/javascript" src="../../../scripts/main.js" defer="defer"></script>
+<script type="text/javascript" src="../../../scripts/prism.js" async="async"></script>
+<script type="text/javascript" src="../../../scripts/symbol-parameters-wrapper_deferred.js" defer="defer"></script>
+<link href="../../../images/logo-icon.svg">
+<link href="../../../styles/logo-styles.css" rel="Stylesheet">
+</head>
+<body>
+<div class="navigation-wrapper" id="navigation-wrapper">
+    <div id="leftToggler"><span class="icon-toggler"></span></div>
+    <div class="library-name">
+            <a href="../../../index.html">
+                    <span>CortexDecoderLibrary</span>
+            </a>
+    </div>
+    <div>
+Version: 4.12.0    </div>
+    <div class="pull-right d-flex">
+        <button id="theme-toggle-button"><span id="theme-toggle"></span></button>
+        <div id="searchBar"></div>
+    </div>
+</div>
+<div id="container">
+    <div id="leftColumn">
+        <div id="sideMenu"></div>
+    </div>
+    <div id="main">
+<div class="main-content" id="content" pageIds="CortexDecoderLibrary::com.codecorp/CDDecoder/decode/#byte[]#int#int#int#com.codecorp.listeners.CDImageDecodeListener/PointingToDeclaration//-876852797">
+  <div class="breadcrumbs"><a href="../../../index.html">CortexDecoderLibrary</a><span class="delimiter">/</span><a href="../index.html">com.codecorp</a><span class="delimiter">/</span><a href="index.html">CDDecoder</a><span class="delimiter">/</span><span class="current">decode</span></div>
+  <div class="cover ">
+    <h1 class="cover"><span><span>decode</span></span></h1>
+  </div>
+  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":CortexDecoderLibrary:dokkaHtml/testFixturesRelease"><div class="symbol monospace block"><span class="token keyword">public </span><span class="token keyword"></span>void <a href="decode.html"><span class="token function">decode</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter "><span class="token keyword"></span><span data-unresolved-link="kotlin/Array///PointingToDeclaration/">Array</span><span class="token operator">&lt;</span>byte<span class="token operator">&gt;</span> imageData<span class="token punctuation">, </span></span><span class="parameter "><span class="token keyword"></span>int width<span class="token punctuation">, </span></span><span class="parameter "><span class="token keyword"></span>int height<span class="token punctuation">, </span></span><span class="parameter "><span class="token keyword"></span>int stride<span class="token punctuation">, </span></span><span class="parameter "><span><span class="token annotation builtin">@</span><a href="https://developer.android.com/reference/kotlin/androidx/annotation/NonNull.html"><span class="token annotation builtin">NonNull</span></a><span class="token punctuation">(</span><span class="token punctuation">)</span> </span><span class="token keyword"></span><a href="../../com.codecorp.listeners/-c-d-image-decode-listener/index.html">CDImageDecodeListener</a> decodeListener</span></span><span class="token punctuation">)</span></div><p class="paragraph">decode scans the image and decodes the barcodes present in the image. </p><div class="sample-container"><pre><code class="block lang-kotlin" theme="idea"><strong>Sample usage</strong><div class="sample-container"><pre><code class="block lang-kotlin" theme="idea">CDDecoder.shared.decode(byteArray, width, height, stride, this:: onDecode);
+
+
+ // onDecode callback listener
+ void onDecode(CDResult[] cdResults){
+    // cdResults is array of decoded items
+    if(cdResults[0].status == CDResult.CDDecodeStatus.success){
+        // set decoding to true to do another scan
+        CDDecoder.shared.setDecoding(true);
+    }
+ }
+
+</code></pre><span class="top-right-position"><span class="copy-icon"></span><div class="copy-popup-wrapper popup-to-left"><span class="copy-popup-icon"></span><span>Content copied to clipboard</span></div></span></div></code></pre><span class="top-right-position"><span class="copy-icon"></span><div class="copy-popup-wrapper popup-to-left"><span class="copy-popup-icon"></span><span>Content copied to clipboard</span></div></span></div><h4 class="">Parameters</h4><div data-togglable="Parameters"><div class="table" data-togglable="Parameters"><div class="table-row" data-filterable-current=":CortexDecoderLibrary:dokkaHtml/testFixturesRelease" data-filterable-set=":CortexDecoderLibrary:dokkaHtml/testFixturesRelease"><div class="main-subrow keyValue WithExtraAttributes"><div class=""><span class="inline-flex"><div><u><span>image</span><wbr></wbr><span><span>Data</span></span></u></div></span></div><div><div class="title"><div data-togglable="Parameters"><p class="paragraph">an Image is converted to a byte array so that it can be used by the decoder to decode the barcode.</p></div></div></div></div></div><div class="table-row" data-filterable-current=":CortexDecoderLibrary:dokkaHtml/testFixturesRelease" data-filterable-set=":CortexDecoderLibrary:dokkaHtml/testFixturesRelease"><div class="main-subrow keyValue WithExtraAttributes"><div class=""><span class="inline-flex"><div><u><span><span>width</span></span></u></div></span></div><div><div class="title"><div data-togglable="Parameters"><p class="paragraph">is the width of the image.</p></div></div></div></div></div><div class="table-row" data-filterable-current=":CortexDecoderLibrary:dokkaHtml/testFixturesRelease" data-filterable-set=":CortexDecoderLibrary:dokkaHtml/testFixturesRelease"><div class="main-subrow keyValue WithExtraAttributes"><div class=""><span class="inline-flex"><div><u><span><span>height</span></span></u></div></span></div><div><div class="title"><div data-togglable="Parameters"><p class="paragraph">is the height of the image.</p></div></div></div></div></div><div class="table-row" data-filterable-current=":CortexDecoderLibrary:dokkaHtml/testFixturesRelease" data-filterable-set=":CortexDecoderLibrary:dokkaHtml/testFixturesRelease"><div class="main-subrow keyValue WithExtraAttributes"><div class=""><span class="inline-flex"><div><u><span><span>stride</span></span></u></div></span></div><div><div class="title"><div data-togglable="Parameters"><p class="paragraph">is the stride/width of the image.</p></div></div></div></div></div><div class="table-row" data-filterable-current=":CortexDecoderLibrary:dokkaHtml/testFixturesRelease" data-filterable-set=":CortexDecoderLibrary:dokkaHtml/testFixturesRelease"><div class="main-subrow keyValue WithExtraAttributes"><div class=""><span class="inline-flex"><div><u><span>decode</span><wbr></wbr><span><span>Listener</span></span></u></div></span></div><div><div class="title"><div data-togglable="Parameters"><p class="paragraph"><a href="../../com.codecorp.listeners/-c-d-image-decode-listener/index.html">CDImageDecodeListener</a> callback must be passed and used to retrieve the result object onDecode.</p></div></div></div></div></div></div></div><hr><div class="symbol monospace block"><span class="token keyword">public </span><span class="token keyword"></span>void <a href="decode.html"><span class="token function">decode</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter "><span class="token keyword"></span><a href="https://developer.android.com/reference/kotlin/java/nio/ByteBuffer.html">ByteBuffer</a> pixBuf<span class="token punctuation">, </span></span><span class="parameter "><span class="token keyword"></span>int width<span class="token punctuation">, </span></span><span class="parameter "><span class="token keyword"></span>int height<span class="token punctuation">, </span></span><span class="parameter "><span class="token keyword"></span>int stride<span class="token punctuation">, </span></span><span class="parameter "><span><span class="token annotation builtin">@</span><a href="https://developer.android.com/reference/kotlin/androidx/annotation/NonNull.html"><span class="token annotation builtin">NonNull</span></a><span class="token punctuation">(</span><span class="token punctuation">)</span> </span><span class="token keyword"></span><a href="../../com.codecorp.listeners/-c-d-image-decode-listener/index.html">CDImageDecodeListener</a> decodeListener</span></span><span class="token punctuation">)</span></div><p class="paragraph">decode scans the image and decodes the barcodes present in the image. </p><div class="sample-container"><pre><code class="block lang-kotlin" theme="idea"><strong>Sample usage</strong><div class="sample-container"><pre><code class="block lang-kotlin" theme="idea">CDDecoder.shared.decode(pixBuffer, width, height, stride, this:: onDecode);
+
+
+ // onDecode callback listener
+ void onDecode(CDResult[] cdResults){
+    // cdResults is array of decoded items
+    if(cdResults[0].status == CDResult.CDDecodeStatus.success){
+        // set decoding to true to do another scan
+        CDDecoder.shared.setDecoding(true);
+    }
+ }
+
+</code></pre><span class="top-right-position"><span class="copy-icon"></span><div class="copy-popup-wrapper popup-to-left"><span class="copy-popup-icon"></span><span>Content copied to clipboard</span></div></span></div></code></pre><span class="top-right-position"><span class="copy-icon"></span><div class="copy-popup-wrapper popup-to-left"><span class="copy-popup-icon"></span><span>Content copied to clipboard</span></div></span></div><h4 class="">Parameters</h4><div data-togglable="Parameters"><div class="table" data-togglable="Parameters"><div class="table-row" data-filterable-current=":CortexDecoderLibrary:dokkaHtml/testFixturesRelease" data-filterable-set=":CortexDecoderLibrary:dokkaHtml/testFixturesRelease"><div class="main-subrow keyValue WithExtraAttributes"><div class=""><span class="inline-flex"><div><u><span>pix</span><wbr></wbr><span><span>Buf</span></span></u></div></span></div><div><div class="title"><div data-togglable="Parameters"><p class="paragraph">an Image is converted to a byte buffer so that it can be used by the decoder to decode the barcode.</p></div></div></div></div></div><div class="table-row" data-filterable-current=":CortexDecoderLibrary:dokkaHtml/testFixturesRelease" data-filterable-set=":CortexDecoderLibrary:dokkaHtml/testFixturesRelease"><div class="main-subrow keyValue WithExtraAttributes"><div class=""><span class="inline-flex"><div><u><span><span>width</span></span></u></div></span></div><div><div class="title"><div data-togglable="Parameters"><p class="paragraph">is the width of the image.</p></div></div></div></div></div><div class="table-row" data-filterable-current=":CortexDecoderLibrary:dokkaHtml/testFixturesRelease" data-filterable-set=":CortexDecoderLibrary:dokkaHtml/testFixturesRelease"><div class="main-subrow keyValue WithExtraAttributes"><div class=""><span class="inline-flex"><div><u><span><span>height</span></span></u></div></span></div><div><div class="title"><div data-togglable="Parameters"><p class="paragraph">is the height of the image.</p></div></div></div></div></div><div class="table-row" data-filterable-current=":CortexDecoderLibrary:dokkaHtml/testFixturesRelease" data-filterable-set=":CortexDecoderLibrary:dokkaHtml/testFixturesRelease"><div class="main-subrow keyValue WithExtraAttributes"><div class=""><span class="inline-flex"><div><u><span><span>stride</span></span></u></div></span></div><div><div class="title"><div data-togglable="Parameters"><p class="paragraph">is the stride/width of the image.</p></div></div></div></div></div><div class="table-row" data-filterable-current=":CortexDecoderLibrary:dokkaHtml/testFixturesRelease" data-filterable-set=":CortexDecoderLibrary:dokkaHtml/testFixturesRelease"><div class="main-subrow keyValue WithExtraAttributes"><div class=""><span class="inline-flex"><div><u><span>decode</span><wbr></wbr><span><span>Listener</span></span></u></div></span></div><div><div class="title"><div data-togglable="Parameters"><p class="paragraph"><a href="../../com.codecorp.listeners/-c-d-image-decode-listener/index.html">CDImageDecodeListener</a> callback must be passed and used to retrieve the result object onDecode.</p></div></div></div></div></div></div></div><hr><div class="symbol monospace block"><span class="token keyword">public </span><span class="token keyword"></span>void <a href="decode.html"><span class="token function">decode</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter "><span class="token keyword"></span><a href="https://developer.android.com/reference/kotlin/androidx/camera/core/ImageProxy.html">ImageProxy</a> imageProxy<span class="token punctuation">, </span></span><span class="parameter "><span><span class="token annotation builtin">@</span><a href="https://developer.android.com/reference/kotlin/androidx/annotation/NonNull.html"><span class="token annotation builtin">NonNull</span></a><span class="token punctuation">(</span><span class="token punctuation">)</span> </span><span class="token keyword"></span><a href="../../com.codecorp.listeners/-c-d-image-decode-listener/index.html">CDImageDecodeListener</a> decodeListener</span></span><span class="token punctuation">)</span></div><p class="paragraph">decode scans the image and decodes the barcodes present in the image. </p><div class="sample-container"><pre><code class="block lang-kotlin" theme="idea"><strong>Sample usage</strong><div class="sample-container"><pre><code class="block lang-kotlin" theme="idea">CDDecoder.shared.decode(imageProxy, this:: onDecode);
+
+
+ // onDecode callback listener
+ void onDecode(CDResult[] cdResults){
+    // cdResults is array of decoded items
+    if(cdResults[0].status == CDResult.CDDecodeStatus.success){
+        // set decoding to true to do another scan
+        CDDecoder.shared.setDecoding(true);
+    }
+ }
+
+</code></pre><span class="top-right-position"><span class="copy-icon"></span><div class="copy-popup-wrapper popup-to-left"><span class="copy-popup-icon"></span><span>Content copied to clipboard</span></div></span></div></code></pre><span class="top-right-position"><span class="copy-icon"></span><div class="copy-popup-wrapper popup-to-left"><span class="copy-popup-icon"></span><span>Content copied to clipboard</span></div></span></div><h4 class="">Parameters</h4><div data-togglable="Parameters"><div class="table" data-togglable="Parameters"><div class="table-row" data-filterable-current=":CortexDecoderLibrary:dokkaHtml/testFixturesRelease" data-filterable-set=":CortexDecoderLibrary:dokkaHtml/testFixturesRelease"><div class="main-subrow keyValue WithExtraAttributes"><div class=""><span class="inline-flex"><div><u><span>image</span><wbr></wbr><span><span>Proxy</span></span></u></div></span></div><div><div class="title"><div data-togglable="Parameters"><p class="paragraph">is converted to byte buffer so that it can be used by the decoder to decode the barcode.</p></div></div></div></div></div><div class="table-row" data-filterable-current=":CortexDecoderLibrary:dokkaHtml/testFixturesRelease" data-filterable-set=":CortexDecoderLibrary:dokkaHtml/testFixturesRelease"><div class="main-subrow keyValue WithExtraAttributes"><div class=""><span class="inline-flex"><div><u><span>decode</span><wbr></wbr><span><span>Listener</span></span></u></div></span></div><div><div class="title"><div data-togglable="Parameters"><p class="paragraph"><a href="../../com.codecorp.listeners/-c-d-image-decode-listener/index.html">CDImageDecodeListener</a> callback must be passed and used to retrieve the result object onDecode.</p></div></div></div></div></div></div></div></div></div>
+</div>
+      <div class="footer">
+        <span class="go-to-top-icon"><a href="#content" id="go-to-top-link"></a></span><span>Copyright (c) 2014-2023 The Code Corporation. All rights reserved.</span><span
+                class="pull-right"><span>Generated by </span><a
+                href="https://github.com/Kotlin/dokka"><span>dokka</span><span class="padded-icon"></span></a></span>
+      </div>
+    </div>
+</div>
+</body>
+</html>

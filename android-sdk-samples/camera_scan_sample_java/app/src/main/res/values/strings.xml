@@ -1,0 +1,11 @@
+<resources>
+    <string name="app_name">CortexDecoder CameraScan Sample</string>
+    <string name="title_activity_activate_license">ActivateLicenseActivity</string>
+    <string name="title_activity_home">HomeActivity</string>
+    <string name="torch_off">Torch Off</string>
+    <string name="show_zoom_slider_controller">Show Zoom Slider Controller</string>
+    <string name="show_zoom_slider">Show Zoom Slider</string>
+    <string name="torch_on">Torch On</string>
+    <string name="barcode_result">Barcode Result</string>
+    <string name="title_activity_image_scan">ImageScanActivity</string>
+</resources>

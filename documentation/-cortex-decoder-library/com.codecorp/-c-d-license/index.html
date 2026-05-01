@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1" charset="UTF-8">
+    <title>CDLicense</title>
+    <link href="../../../images/logo-icon.svg" rel="icon" type="image/svg">
+    <script>var pathToRoot = "../../../";</script>
+    <script>const storage = localStorage.getItem("dokka-dark-mode")
+    if (storage == null) {
+        const osDarkSchemePreferred = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches
+        if (osDarkSchemePreferred === true) {
+            document.getElementsByTagName("html")[0].classList.add("theme-dark")
+        }
+    } else {
+        const savedDarkMode = JSON.parse(storage)
+        if(savedDarkMode === true) {
+            document.getElementsByTagName("html")[0].classList.add("theme-dark")
+        }
+    }
+    </script>
+<script type="text/javascript" src="../../../scripts/sourceset_dependencies.js" async="async"></script>
+<link href="../../../styles/style.css" rel="Stylesheet">
+<link href="../../../styles/jetbrains-mono.css" rel="Stylesheet">
+<link href="../../../styles/main.css" rel="Stylesheet">
+<link href="../../../styles/prism.css" rel="Stylesheet">
+<link href="../../../styles/logo-styles.css" rel="Stylesheet">
+<script type="text/javascript" src="../../../scripts/clipboard.js" async="async"></script>
+<script type="text/javascript" src="../../../scripts/navigation-loader.js" async="async"></script>
+<script type="text/javascript" src="../../../scripts/platform-content-handler.js" async="async"></script>
+<script type="text/javascript" src="../../../scripts/main.js" defer="defer"></script>
+<script type="text/javascript" src="../../../scripts/prism.js" async="async"></script>
+<script type="text/javascript" src="../../../scripts/symbol-parameters-wrapper_deferred.js" defer="defer"></script>
+<link href="../../../images/logo-icon.svg">
+<link href="../../../styles/logo-styles.css" rel="Stylesheet">
+</head>
+<body>
+<div class="navigation-wrapper" id="navigation-wrapper">
+    <div id="leftToggler"><span class="icon-toggler"></span></div>
+    <div class="library-name">
+            <a href="../../../index.html">
+                    <span>CortexDecoderLibrary</span>
+            </a>
+    </div>
+    <div>
+Version: 4.12.0    </div>
+    <div class="pull-right d-flex">
+        <button id="theme-toggle-button"><span id="theme-toggle"></span></button>
+        <div id="searchBar"></div>
+    </div>
+</div>
+<div id="container">
+    <div id="leftColumn">
+        <div id="sideMenu"></div>
+    </div>
+    <div id="main">
+<div class="main-content" id="content" pageIds="CortexDecoderLibrary::com.codecorp/CDLicense///PointingToDeclaration//-876852797">
+  <div class="breadcrumbs"><a href="../../../index.html">CortexDecoderLibrary</a><span class="delimiter">/</span><a href="../index.html">com.codecorp</a><span class="delimiter">/</span><span class="current">CDLicense</span></div>
+  <div class="cover ">
+    <h1 class="cover"><span><span>CDLicense</span></span></h1>
+    <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":CortexDecoderLibrary:dokkaHtml/testFixturesRelease"><div class="symbol monospace"><span class="token keyword">public </span><span class="token keyword">class </span><a href="index.html">CDLicense</a></div><p class="paragraph"><a href="index.html">CDLicense</a> class is intended to support all license related features such as activating EDK or Gemalto license.</p></div></div>
+  </div>
+  <div class="tabbedcontent">
+    <div class="tabs-section" tabs-section="tabs-section"><button class="section-tab" data-active="" data-togglable="Functions">Functions</button><button class="section-tab" data-togglable="Properties">Properties</button></div>
+    <div class="tabs-section-body">
+      <h2 class="">Functions</h2>
+      <div class="table" data-togglable="Functions"><a data-name="-923311165%2FFunctions%2F-876852797" anchor-label="activateLicense" id="-923311165%2FFunctions%2F-876852797" data-filterable-set=":CortexDecoderLibrary:dokkaHtml/testFixturesRelease"></a>
+        <div class="table-row" data-filterable-current=":CortexDecoderLibrary:dokkaHtml/testFixturesRelease" data-filterable-set=":CortexDecoderLibrary:dokkaHtml/testFixturesRelease">
+          <div class="main-subrow keyValue ">
+            <div class=""><span class="inline-flex">
+                <div><a href="activate-license.html"><span>activate</span><wbr></wbr><span><span>License</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-923311165%2FFunctions%2F-876852797"></span>
+                  <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                </span></span></div>
+            <div>
+              <div class="title">
+                <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":CortexDecoderLibrary:dokkaHtml/testFixturesRelease"><div class="symbol monospace block"><span class="token keyword">public </span><span class="token keyword"></span>void <a href="activate-license.html"><span class="token function">activateLicense</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter "><span><span class="token annotation builtin">@</span><a href="https://developer.android.com/reference/kotlin/androidx/annotation/NonNull.html"><span class="token annotation builtin">NonNull</span></a><span class="token punctuation">(</span><span class="token punctuation">)</span> </span><span class="token keyword"></span><a href="https://developer.android.com/reference/kotlin/java/lang/String.html">String</a> key<span class="token punctuation">, </span></span><span class="parameter "><span><span class="token annotation builtin">@</span><a href="https://developer.android.com/reference/kotlin/androidx/annotation/NonNull.html"><span class="token annotation builtin">NonNull</span></a><span class="token punctuation">(</span><span class="token punctuation">)</span> </span><span class="token keyword"></span><a href="../../com.codecorp.listeners/-c-d-license-result-listener/index.html">CDLicenseResultListener</a> listener</span></span><span class="token punctuation">)</span></div><div class="brief ">activateLicense activates CortexDecoder license.</div></div></div>
+              </div>
+            </div>
+          </div>
+        </div>
+<a data-name="-1728864794%2FFunctions%2F-876852797" anchor-label="generateDeviceID" id="-1728864794%2FFunctions%2F-876852797" data-filterable-set=":CortexDecoderLibrary:dokkaHtml/testFixturesRelease"></a>
+        <div class="table-row" data-filterable-current=":CortexDecoderLibrary:dokkaHtml/testFixturesRelease" data-filterable-set=":CortexDecoderLibrary:dokkaHtml/testFixturesRelease">
+          <div class="main-subrow keyValue ">
+            <div class=""><span class="inline-flex">
+                <div><a href="generate-device-i-d.html"><span>generate</span><wbr></wbr><span>Device</span><wbr></wbr><span><span>ID</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1728864794%2FFunctions%2F-876852797"></span>
+                  <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                </span></span></div>
+            <div>
+              <div class="title">
+                <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":CortexDecoderLibrary:dokkaHtml/testFixturesRelease"><div class="symbol monospace block"><span class="token keyword">public </span><span class="token keyword"></span>void <a href="generate-device-i-d.html"><span class="token function">generateDeviceID</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter "><span><span class="token annotation builtin">@</span><a href="https://developer.android.com/reference/kotlin/androidx/annotation/NonNull.html"><span class="token annotation builtin">NonNull</span></a><span class="token punctuation">(</span><span class="token punctuation">)</span> </span><span class="token keyword"></span><a href="../../com.codecorp.listeners/-c-d-device-id-listener/index.html">CDDeviceIdListener</a> deviceIdListener</span></span><span class="token punctuation">)</span></div><div class="brief ">generateDeviceID generates device specific unique ID string and pass this string to callback <a href="../../com.codecorp.listeners/-c-d-device-id-listener/index.html">CDDeviceIdListener</a>.</div></div></div>
+              </div>
+            </div>
+          </div>
+        </div>
+<a data-name="711047503%2FFunctions%2F-876852797" anchor-label="getLicensedPerformanceFeatures" id="711047503%2FFunctions%2F-876852797" data-filterable-set=":CortexDecoderLibrary:dokkaHtml/testFixturesRelease"></a>
+        <div class="table-row" data-filterable-current=":CortexDecoderLibrary:dokkaHtml/testFixturesRelease" data-filterable-set=":CortexDecoderLibrary:dokkaHtml/testFixturesRelease">
+          <div class="main-subrow keyValue ">
+            <div class=""><span class="inline-flex">
+                <div><a href="get-licensed-performance-features.html"><span>get</span><wbr></wbr><span>Licensed</span><wbr></wbr><span>Performance</span><wbr></wbr><span><span>Features</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="711047503%2FFunctions%2F-876852797"></span>
+                  <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                </span></span></div>
+            <div>
+              <div class="title">
+                <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":CortexDecoderLibrary:dokkaHtml/testFixturesRelease"><div class="symbol monospace block"><span class="token keyword">public </span><span class="token keyword"></span><a href="https://developer.android.com/reference/kotlin/java/util/HashSet.html">HashSet</a><span class="token operator">&lt;</span><a href="../-c-d-performance-features/-c-d-performance-type/index.html">CDPerformanceFeatures.CDPerformanceType</a><span class="token operator">&gt;</span> <a href="get-licensed-performance-features.html"><span class="token function">getLicensedPerformanceFeatures</span></a><span class="token punctuation">(</span><span class="token punctuation">)</span></div><div class="brief ">getLicensedPerformanceFeatures returns all the licensed performance features.</div></div></div>
+              </div>
+            </div>
+          </div>
+        </div>
+<a data-name="1174599349%2FFunctions%2F-876852797" anchor-label="getLicensedSymbologies" id="1174599349%2FFunctions%2F-876852797" data-filterable-set=":CortexDecoderLibrary:dokkaHtml/testFixturesRelease"></a>
+        <div class="table-row" data-filterable-current=":CortexDecoderLibrary:dokkaHtml/testFixturesRelease" data-filterable-set=":CortexDecoderLibrary:dokkaHtml/testFixturesRelease">
+          <div class="main-subrow keyValue ">
+            <div class=""><span class="inline-flex">
+                <div><a href="get-licensed-symbologies.html"><span>get</span><wbr></wbr><span>Licensed</span><wbr></wbr><span><span>Symbologies</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1174599349%2FFunctions%2F-876852797"></span>
+                  <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                </span></span></div>
+            <div>
+              <div class="title">
+                <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":CortexDecoderLibrary:dokkaHtml/testFixturesRelease"><div class="symbol monospace block"><span class="token keyword">public </span><span class="token keyword"></span><a href="https://developer.android.com/reference/kotlin/java/util/HashSet.html">HashSet</a><span class="token operator">&lt;</span><a href="../-c-d-symbology/-c-d-symbology-type/index.html">CDSymbology.CDSymbologyType</a><span class="token operator">&gt;</span> <a href="get-licensed-symbologies.html"><span class="token function">getLicensedSymbologies</span></a><span class="token punctuation">(</span><span class="token punctuation">)</span></div><div class="brief ">getLicensedSymbologies returns all the licensed symbologies.</div></div></div>
+              </div>
+            </div>
+          </div>
+        </div>
+<a data-name="-703885940%2FFunctions%2F-876852797" anchor-label="loadLicenseFile" id="-703885940%2FFunctions%2F-876852797" data-filterable-set=":CortexDecoderLibrary:dokkaHtml/testFixturesRelease"></a>
+        <div class="table-row" data-filterable-current=":CortexDecoderLibrary:dokkaHtml/testFixturesRelease" data-filterable-set=":CortexDecoderLibrary:dokkaHtml/testFixturesRelease">
+          <div class="main-subrow keyValue ">
+            <div class=""><span class="inline-flex">
+                <div><a href="load-license-file.html"><span>load</span><wbr></wbr><span>License</span><wbr></wbr><span><span>File</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-703885940%2FFunctions%2F-876852797"></span>
+                  <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                </span></span></div>
+            <div>
+              <div class="title">
+                <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":CortexDecoderLibrary:dokkaHtml/testFixturesRelease"><div class="symbol monospace block"><span class="token keyword">public </span><span class="token keyword"></span>void <a href="load-license-file.html"><span class="token function">loadLicenseFile</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter "><span class="token keyword"></span><a href="https://developer.android.com/reference/kotlin/java/lang/String.html">String</a> fileContent<span class="token punctuation">, </span></span><span class="parameter "><span><span class="token annotation builtin">@</span><a href="https://developer.android.com/reference/kotlin/androidx/annotation/NonNull.html"><span class="token annotation builtin">NonNull</span></a><span class="token punctuation">(</span><span class="token punctuation">)</span> </span><span class="token keyword"></span><a href="../../com.codecorp.listeners/-c-d-license-result-listener/index.html">CDLicenseResultListener</a> cdLicenseResultListener</span></span><span class="token punctuation">)</span></div><div class="brief ">loadLicenseFile activates the license on device using (.V2C) file while it's offline.</div></div></div>
+              </div>
+            </div>
+          </div>
+        </div>
+<a data-name="-1049789257%2FFunctions%2F-876852797" anchor-label="setCustomerID" id="-1049789257%2FFunctions%2F-876852797" data-filterable-set=":CortexDecoderLibrary:dokkaHtml/testFixturesRelease"></a>
+        <div class="table-row" data-filterable-current=":CortexDecoderLibrary:dokkaHtml/testFixturesRelease" data-filterable-set=":CortexDecoderLibrary:dokkaHtml/testFixturesRelease">
+          <div class="main-subrow keyValue ">
+            <div class=""><span class="inline-flex">
+                <div><a href="set-customer-i-d.html"><span>set</span><wbr></wbr><span>Customer</span><wbr></wbr><span><span>ID</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1049789257%2FFunctions%2F-876852797"></span>
+                  <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                </span></span></div>
+            <div>
+              <div class="title">
+                <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":CortexDecoderLibrary:dokkaHtml/testFixturesRelease"><div class="symbol monospace block"><span class="token keyword">public </span><span class="token keyword"></span>void <a href="set-customer-i-d.html"><span class="token function">setCustomerID</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter "><span><span class="token annotation builtin">@</span><a href="https://developer.android.com/reference/kotlin/androidx/annotation/NonNull.html"><span class="token annotation builtin">NonNull</span></a><span class="token punctuation">(</span><span class="token punctuation">)</span> </span><span class="token keyword"></span><a href="https://developer.android.com/reference/kotlin/java/lang/String.html">String</a> customerID</span></span><span class="token punctuation">)</span></div><div class="brief ">setCustomerID sets the customer ID which is a part of the license key for activating the license.</div></div></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <h2 class="">Properties</h2>
+      <div class="table" data-togglable="Properties"><a data-name="-110811618%2FProperties%2F-876852797" anchor-label="shared" id="-110811618%2FProperties%2F-876852797" data-filterable-set=":CortexDecoderLibrary:dokkaHtml/testFixturesRelease"></a>
+        <div class="table-row" data-filterable-current=":CortexDecoderLibrary:dokkaHtml/testFixturesRelease" data-filterable-set=":CortexDecoderLibrary:dokkaHtml/testFixturesRelease">
+          <div class="main-subrow keyValue ">
+            <div class=""><span class="inline-flex">
+                <div><a href="index.html#-110811618%2FProperties%2F-876852797"><span><span>shared</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-110811618%2FProperties%2F-876852797"></span>
+                  <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                </span></span></div>
+            <div>
+              <div class="title">
+                <div class="platform-hinted " data-platform-hinted="data-platform-hinted" data-togglable="Properties"><div class="content sourceset-dependent-content" data-active="" data-togglable=":CortexDecoderLibrary:dokkaHtml/testFixturesRelease"><a data-name="-110811618%2FProperties%2F-876852797" anchor-label="shared" id="-110811618%2FProperties%2F-876852797" data-filterable-set=":CortexDecoderLibrary:dokkaHtml/testFixturesRelease"></a><div class="symbol monospace block"><span class="token keyword">public </span><span class="token keyword">final </span><span class="token keyword">static </span><a href="index.html">CDLicense</a> <a href="index.html#-110811618%2FProperties%2F-876852797">shared</a></div><div class="brief "><a data-name="-110811618%2FProperties%2F-876852797" anchor-label="shared" id="-110811618%2FProperties%2F-876852797" data-filterable-set=":CortexDecoderLibrary:dokkaHtml/testFixturesRelease"></a>Singleton object for <a href="index.html">CDLicense</a> class.</div></div></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      <div class="footer">
+        <span class="go-to-top-icon"><a href="#content" id="go-to-top-link"></a></span><span>Copyright (c) 2014-2023 The Code Corporation. All rights reserved.</span><span
+                class="pull-right"><span>Generated by </span><a
+                href="https://github.com/Kotlin/dokka"><span>dokka</span><span class="padded-icon"></span></a></span>
+      </div>
+    </div>
+</div>
+</body>
+</html>

@@ -1,0 +1,22 @@
+# Gradle
+.gradle/
+build/
+
+# Android Studio
+.idea/
+*.iml
+*.ipr
+*.iws
+
+# Local configuration
+local.properties
+
+# Logs
+*.log
+
+# OS generated files
+.DS_Store
+Thumbs.db
+
+# Optional: If libs/ contains large binaries like CortexDecoderLibrary.aar, consider ignoring it and adding a note in README.md on how to obtain it separately
+libs/

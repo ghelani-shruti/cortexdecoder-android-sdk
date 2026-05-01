@@ -1,0 +1,199 @@
+package com.bradycorp.cortexdecoderkotlinsample
+
+import android.Manifest
+import android.annotation.SuppressLint
+import android.content.pm.PackageManager
+import android.os.Build
+import androidx.appcompat.app.AppCompatActivity
+import android.os.Bundle
+import android.view.View
+import android.widget.RelativeLayout
+import androidx.appcompat.app.AlertDialog
+import androidx.appcompat.widget.AppCompatTextView
+import androidx.constraintlayout.widget.ConstraintLayout
+import androidx.core.app.ActivityCompat
+import androidx.core.content.ContextCompat
+import androidx.core.view.ViewCompat
+import androidx.core.view.WindowInsetsCompat
+import androidx.core.view.updateLayoutParams
+import com.codecorp.CDCamera
+import com.codecorp.CDDecoder
+import com.codecorp.CDResult
+
+/**
+ * CameraScanActivity demonstrates camera-based barcode scanning functionality.
+ * This activity handles camera permission requests, initializes the camera preview,
+ * configures decoding settings, and displays decoded barcode results in the UI.
+ * Tap anywhere on the camera preview to start scanning.
+ */
+class CameraScanActivity : AppCompatActivity() {
+
+    // Request code for camera permission
+    private val cameraPermissionRequestCode = 1001
+
+    // Handles the result of camera permission request
+    override fun onRequestPermissionsResult(requestCode: Int, permissions: Array<String>, grantResults: IntArray) {
+        super.onRequestPermissionsResult(requestCode, permissions, grantResults)
+        when (requestCode) {
+            cameraPermissionRequestCode -> {
+                if (grantResults.isNotEmpty() && grantResults[0] == PackageManager.PERMISSION_GRANTED) {
+                    // Permission granted - no action needed here
+                } else if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.M) {
+                    if (shouldShowRequestPermissionRationale(Manifest.permission.CAMERA)) {
+                        // User has previously denied the permission request, show a rationale for why the permission is needed
+                        // You can use an AlertDialog to display a message to the user explaining why the permission is needed
+                        AlertDialog.Builder(this)
+                            .setTitle("Camera Permission Required")
+                            .setMessage("Please allow camera permissions.")
+                            .setPositiveButton("OK") { _, _ ->
+                                // Request the permission again
+                                ActivityCompat.requestPermissions(this, arrayOf(Manifest.permission.CAMERA), cameraPermissionRequestCode)
+                            }
+                            .setNegativeButton("Cancel") { _, _ ->
+                                // Permission request cancelled by the user
+                            }
+                            .create()
+                            .show()
+                    } else {
+                        requestPermissions(arrayOf(Manifest.permission.CAMERA), cameraPermissionRequestCode)
+                    }
+                }
+                return
+            }
+        }
+    }
+
+    /**
+     * Initializes the activity, checks camera permission, and sets up touch listeners.
+     */
+    override fun onCreate(savedInstanceState: Bundle?) {
+        super.onCreate(savedInstanceState)
+        setContentView(R.layout.activity_camera_scan)
+
+        //Explicitly handle window insets to position the barcode result above the navigation bar
+        ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.activity_camera_scan_barcode_result)) { view, insets ->
+            val systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars())
+            view.updateLayoutParams<ConstraintLayout.LayoutParams> {
+                bottomMargin = systemBars.bottom
+            }
+            insets
+        }
+        // Check and request camera permission if needed
+        if (ContextCompat.checkSelfPermission(this, Manifest.permission.CAMERA) != PackageManager.PERMISSION_GRANTED) {
+            ActivityCompat.requestPermissions(this, arrayOf(Manifest.permission.CAMERA), cameraPermissionRequestCode)
+        }
+        // Set up touch listeners for initiating scans
+        setOnClicks()
+    }
+
+    override fun onResume() {
+        super.onResume()
+        // Configure decode settings
+        configDecodeSettings()
+        // Set decoding on
+        CDDecoder.shared.decoding = true
+        // Start camera preview
+        startCameraPreview()
+    }
+
+    override fun onPause() {
+        super.onPause()
+        // Set decoding off
+        CDDecoder.shared.decoding = false
+        // Destroy camera preview
+        stopCameraPreview()
+    }
+
+    /**
+     * Starting Camera and preview and updating UI
+     * [CDCamera.startCamera]
+     * [CDCamera.startPreview]
+     */
+    private fun startCameraPreview(){
+        // Start the camera
+        CDCamera.shared.startCamera(this::onDecode)
+        // Update RelativeLayout with Camera Preview
+        val mCameraFrame = findViewById<View>(R.id.activity_camera_scan_frame) as RelativeLayout
+        // Start the preview and add at index 0
+        mCameraFrame.addView(CDCamera.shared.startPreview(), 0)
+    }
+
+    /**
+     * Stopping camera and preview and updating UI
+     * [CDCamera.stopPreview]
+     * [CDCamera.stopCamera]
+     */
+    private fun stopCameraPreview(){
+        // Stop the preview
+        CDCamera.shared.stopPreview()
+        // Remove from ui
+        val mCameraFrame = findViewById<View>(R.id.activity_camera_scan_frame) as RelativeLayout
+        mCameraFrame.removeViewAt(0)
+        mCameraFrame.invalidate()
+        // Stop the camera
+        CDCamera.shared.stopCamera()
+    }
+
+    /**
+     * Configuring Decode Settings
+     * Enabling Highlights[CDCamera.setHighLightBarcodes]
+     * Setting barcodes to decode[CDDecoder.setBarcodesToDecode]
+     * Enabling Decoding [CDDecoder.setDecoding]
+     */
+    private fun configDecodeSettings(){
+        // Enable highlights
+        CDCamera.shared.setHighLightBarcodes(true)
+        // Set barcodes to decode exactly 1
+        CDDecoder.shared.setBarcodesToDecode(1, true)
+        // Set decoding on
+        CDDecoder.shared.decoding = true
+    }
+
+    /**
+     * onDecode callback listener implementation.
+     * Listens to callback result from [CDCamera.startCamera]
+     */
+    private fun onDecode(cdResults: Array<CDResult>) {
+        // If result size is 1
+        if(cdResults.size == 1){
+            // Print on screen
+            runOnUiThread{
+                showBarcodeResult(cdResults[0])
+            }
+        }
+
+        // cdResults is array of decoded items
+        if (cdResults[0].status == CDResult.CDDecodeStatus.success || cdResults[0].status == CDResult.CDDecodeStatus.decodedQRConfigCode) {
+            runOnUiThread {
+                // Stop video capturing if decoded
+                CDCamera.shared.videoCapturing = false
+            }
+        }
+    }
+
+
+    // UI update methods
+    @SuppressLint("SetTextI18n")
+    private fun showBarcodeResult(cdResult: CDResult) {
+        findViewById<AppCompatTextView>(R.id.activity_camera_scan_barcode_result).text =
+            """
+            Status: ${cdResult.status.name}
+            Barcode Data: ${cdResult.barcodeData}
+            Symbology: ${cdResult.symbology}
+            Decode Time: ${cdResult.decodeTime} ms        
+            """.trimIndent()
+    }
+
+    private fun setOnClicks(){
+        // Frame on click listener
+        findViewById<View>(R.id.activity_camera_scan_frame).setOnClickListener {
+            if(!CDCamera.shared.videoCapturing){
+                // Start camera again
+                CDCamera.shared.videoCapturing = true
+                // Start decoding again
+                CDDecoder.shared.decoding = true
+            }
+        }
+
+    }
+}

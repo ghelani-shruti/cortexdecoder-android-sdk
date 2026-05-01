@@ -1,0 +1,472 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1" charset="UTF-8">
+    <title>CDResult</title>
+    <link href="../../../images/logo-icon.svg" rel="icon" type="image/svg">
+    <script>var pathToRoot = "../../../";</script>
+    <script>const storage = localStorage.getItem("dokka-dark-mode")
+    if (storage == null) {
+        const osDarkSchemePreferred = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches
+        if (osDarkSchemePreferred === true) {
+            document.getElementsByTagName("html")[0].classList.add("theme-dark")
+        }
+    } else {
+        const savedDarkMode = JSON.parse(storage)
+        if(savedDarkMode === true) {
+            document.getElementsByTagName("html")[0].classList.add("theme-dark")
+        }
+    }
+    </script>
+<script type="text/javascript" src="../../../scripts/sourceset_dependencies.js" async="async"></script>
+<link href="../../../styles/style.css" rel="Stylesheet">
+<link href="../../../styles/jetbrains-mono.css" rel="Stylesheet">
+<link href="../../../styles/main.css" rel="Stylesheet">
+<link href="../../../styles/prism.css" rel="Stylesheet">
+<link href="../../../styles/logo-styles.css" rel="Stylesheet">
+<script type="text/javascript" src="../../../scripts/clipboard.js" async="async"></script>
+<script type="text/javascript" src="../../../scripts/navigation-loader.js" async="async"></script>
+<script type="text/javascript" src="../../../scripts/platform-content-handler.js" async="async"></script>
+<script type="text/javascript" src="../../../scripts/main.js" defer="defer"></script>
+<script type="text/javascript" src="../../../scripts/prism.js" async="async"></script>
+<script type="text/javascript" src="../../../scripts/symbol-parameters-wrapper_deferred.js" defer="defer"></script>
+<link href="../../../images/logo-icon.svg">
+<link href="../../../styles/logo-styles.css" rel="Stylesheet">
+</head>
+<body>
+<div class="navigation-wrapper" id="navigation-wrapper">
+    <div id="leftToggler"><span class="icon-toggler"></span></div>
+    <div class="library-name">
+            <a href="../../../index.html">
+                    <span>CortexDecoderLibrary</span>
+            </a>
+    </div>
+    <div>
+Version: 4.12.0    </div>
+    <div class="pull-right d-flex">
+        <button id="theme-toggle-button"><span id="theme-toggle"></span></button>
+        <div id="searchBar"></div>
+    </div>
+</div>
+<div id="container">
+    <div id="leftColumn">
+        <div id="sideMenu"></div>
+    </div>
+    <div id="main">
+<div class="main-content" id="content" pageIds="CortexDecoderLibrary::com.codecorp/CDResult///PointingToDeclaration//-876852797">
+  <div class="breadcrumbs"><a href="../../../index.html">CortexDecoderLibrary</a><span class="delimiter">/</span><a href="../index.html">com.codecorp</a><span class="delimiter">/</span><span class="current">CDResult</span></div>
+  <div class="cover ">
+    <h1 class="cover"><span><span>CDResult</span></span></h1>
+    <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":CortexDecoderLibrary:dokkaHtml/testFixturesRelease"><div class="symbol monospace"><span class="token keyword">public </span><span class="token keyword">class </span><a href="index.html">CDResult</a><span class="token keyword"> implements </span><a href="https://developer.android.com/reference/kotlin/java/io/Serializable.html">Serializable</a></div><p class="paragraph"><a href="index.html">CDResult</a> class is used to store and return barcode data back to the customer. </p><p class="paragraph"> CortexDecoder returns barcode data via different callback listeners for different use cases. </p><ul><li>Camera scanning - <a href="../../com.codecorp.listeners/-c-d-camera-decode-listener/on-decode.html">CDCameraDecodeListener</a>.</li></ul><ul><li>Image scanning - <a href="../../com.codecorp.listeners/-c-d-image-decode-listener/on-decode.html">CDImageDecodeListener</a>.</li></ul> CortexDecoder always returns an array of CDResult (this supports multiple barcodes). The followings are fields supported in CDResult along with their data type. <p class="paragraph"> CDResult class provides details about barcode data, symbology, barcode coordinate with respect to camera preview, decode time, etc. It also has the status field which informs of either a successful barcode decode or error code for the each frame it received/processed using the following possible values: success, noDecode, noActiveLicense, decodingDisabled, noUniqueDecode, etc. CDResult also contains barcode verification and codewords information when these particular features are enabled. </p></div></div>
+  </div>
+  <div class="tabbedcontent">
+    <div class="tabs-section" tabs-section="tabs-section"><button class="section-tab" data-active="" data-togglable="Types">Types</button><button class="section-tab" data-togglable="Functions">Functions</button><button class="section-tab" data-togglable="Properties">Properties</button></div>
+    <div class="tabs-section-body">
+      <h2 class="">Types</h2>
+      <div class="table" data-togglable="Types"><a data-name="-1260314821%2FClasslikes%2F-876852797" anchor-label="CDCodewords" id="-1260314821%2FClasslikes%2F-876852797" data-filterable-set=":CortexDecoderLibrary:dokkaHtml/testFixturesRelease"></a>
+        <div class="table-row" data-filterable-current=":CortexDecoderLibrary:dokkaHtml/testFixturesRelease" data-filterable-set=":CortexDecoderLibrary:dokkaHtml/testFixturesRelease">
+          <div class="main-subrow keyValue ">
+            <div class=""><span class="inline-flex">
+                <div><a href="-c-d-codewords/index.html"><span><span>CDCodewords</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1260314821%2FClasslikes%2F-876852797"></span>
+                  <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                </span></span></div>
+            <div>
+              <div class="title">
+                <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":CortexDecoderLibrary:dokkaHtml/testFixturesRelease"><div class="symbol monospace"><span class="token keyword">public </span><span class="token keyword">class </span><a href="-c-d-codewords/index.html">CDCodewords</a><span class="token keyword"> implements </span><a href="https://developer.android.com/reference/kotlin/java/io/Serializable.html">Serializable</a></div><div class="brief ">CDCodewords class is used to return error correction information for barcode decoded.</div></div></div>
+              </div>
+            </div>
+          </div>
+        </div>
+<a data-name="1000820363%2FClasslikes%2F-876852797" anchor-label="CDDecodeStatus" id="1000820363%2FClasslikes%2F-876852797" data-filterable-set=":CortexDecoderLibrary:dokkaHtml/testFixturesRelease"></a>
+        <div class="table-row" data-filterable-current=":CortexDecoderLibrary:dokkaHtml/testFixturesRelease" data-filterable-set=":CortexDecoderLibrary:dokkaHtml/testFixturesRelease">
+          <div class="main-subrow keyValue ">
+            <div class=""><span class="inline-flex">
+                <div><a href="-c-d-decode-status/index.html"><span>CDDecode</span><wbr></wbr><span><span>Status</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1000820363%2FClasslikes%2F-876852797"></span>
+                  <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                </span></span></div>
+            <div>
+              <div class="title">
+                <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":CortexDecoderLibrary:dokkaHtml/testFixturesRelease"><div class="symbol monospace"><span class="token keyword">public </span><span class="token keyword">enum </span><a href="-c-d-decode-status/index.html">CDDecodeStatus</a></div><div class="brief "><a href="-c-d-decode-status/index.html">CDDecodeStatus</a> represents the constants indicating status of barcode decode attempt.</div></div></div>
+              </div>
+            </div>
+          </div>
+        </div>
+<a data-name="-1197007781%2FClasslikes%2F-876852797" anchor-label="CDPolarity" id="-1197007781%2FClasslikes%2F-876852797" data-filterable-set=":CortexDecoderLibrary:dokkaHtml/testFixturesRelease"></a>
+        <div class="table-row" data-filterable-current=":CortexDecoderLibrary:dokkaHtml/testFixturesRelease" data-filterable-set=":CortexDecoderLibrary:dokkaHtml/testFixturesRelease">
+          <div class="main-subrow keyValue ">
+            <div class=""><span class="inline-flex">
+                <div><a href="-c-d-polarity/index.html"><span><span>CDPolarity</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1197007781%2FClasslikes%2F-876852797"></span>
+                  <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                </span></span></div>
+            <div>
+              <div class="title">
+                <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":CortexDecoderLibrary:dokkaHtml/testFixturesRelease"><div class="symbol monospace"><span class="token keyword">public </span><span class="token keyword">enum </span><a href="-c-d-polarity/index.html">CDPolarity</a></div><div class="brief "><a href="-c-d-polarity/index.html">CDPolarity</a> represents the polarity of a decoded barcode.</div></div></div>
+              </div>
+            </div>
+          </div>
+        </div>
+<a data-name="-362631088%2FClasslikes%2F-876852797" anchor-label="CDVerification" id="-362631088%2FClasslikes%2F-876852797" data-filterable-set=":CortexDecoderLibrary:dokkaHtml/testFixturesRelease"></a>
+        <div class="table-row" data-filterable-current=":CortexDecoderLibrary:dokkaHtml/testFixturesRelease" data-filterable-set=":CortexDecoderLibrary:dokkaHtml/testFixturesRelease">
+          <div class="main-subrow keyValue ">
+            <div class=""><span class="inline-flex">
+                <div><a href="-c-d-verification/index.html"><span><span>CDVerification</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-362631088%2FClasslikes%2F-876852797"></span>
+                  <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                </span></span></div>
+            <div>
+              <div class="title">
+                <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":CortexDecoderLibrary:dokkaHtml/testFixturesRelease"><div class="symbol monospace"><span class="token keyword">public </span><span class="token keyword">class </span><a href="-c-d-verification/index.html">CDVerification</a><span class="token keyword"> implements </span><a href="https://developer.android.com/reference/kotlin/java/io/Serializable.html">Serializable</a></div><div class="brief ">CDVerification class is used to return barcode verification result.</div></div></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <h2 class="">Functions</h2>
+      <div class="table" data-togglable="Functions"><a data-name="1103087011%2FFunctions%2F-876852797" anchor-label="getImageBitmap" id="1103087011%2FFunctions%2F-876852797" data-filterable-set=":CortexDecoderLibrary:dokkaHtml/testFixturesRelease"></a>
+        <div class="table-row" data-filterable-current=":CortexDecoderLibrary:dokkaHtml/testFixturesRelease" data-filterable-set=":CortexDecoderLibrary:dokkaHtml/testFixturesRelease">
+          <div class="main-subrow keyValue ">
+            <div class=""><span class="inline-flex">
+                <div><a href="get-image-bitmap.html"><span>get</span><wbr></wbr><span>Image</span><wbr></wbr><span><span>Bitmap</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1103087011%2FFunctions%2F-876852797"></span>
+                  <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                </span></span></div>
+            <div>
+              <div class="title">
+                <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":CortexDecoderLibrary:dokkaHtml/testFixturesRelease"><div class="symbol monospace block"><span class="token keyword">public </span><span class="token keyword"></span><a href="https://developer.android.com/reference/kotlin/android/graphics/Bitmap.html">Bitmap</a> <a href="get-image-bitmap.html"><span class="token function">getImageBitmap</span></a><span class="token punctuation">(</span><span class="token punctuation">)</span></div><div class="brief "><a href="get-image-bitmap.html">getImageBitmap</a> represents grayscale bytebuffer of decoded barcode image when API <a href="../-c-d-camera/set-decoded-image-retrieval.html">setDecodedImageRetrieval</a> is enabled.</div></div></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <h2 class="">Properties</h2>
+      <div class="table" data-togglable="Properties"><a data-name="1139161177%2FProperties%2F-876852797" anchor-label="barcodeData" id="1139161177%2FProperties%2F-876852797" data-filterable-set=":CortexDecoderLibrary:dokkaHtml/testFixturesRelease"></a>
+        <div class="table-row" data-filterable-current=":CortexDecoderLibrary:dokkaHtml/testFixturesRelease" data-filterable-set=":CortexDecoderLibrary:dokkaHtml/testFixturesRelease">
+          <div class="main-subrow keyValue ">
+            <div class=""><span class="inline-flex">
+                <div><a href="index.html#1139161177%2FProperties%2F-876852797"><span>barcode</span><wbr></wbr><span><span>Data</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1139161177%2FProperties%2F-876852797"></span>
+                  <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                </span></span></div>
+            <div>
+              <div class="title">
+                <div class="platform-hinted " data-platform-hinted="data-platform-hinted" data-togglable="Properties"><div class="content sourceset-dependent-content" data-active="" data-togglable=":CortexDecoderLibrary:dokkaHtml/testFixturesRelease"><a data-name="1139161177%2FProperties%2F-876852797" anchor-label="barcodeData" id="1139161177%2FProperties%2F-876852797" data-filterable-set=":CortexDecoderLibrary:dokkaHtml/testFixturesRelease"></a><div class="symbol monospace block"><span class="token keyword">public </span><span class="token keyword"></span><a href="https://developer.android.com/reference/kotlin/java/lang/String.html">String</a> <a href="index.html#1139161177%2FProperties%2F-876852797">barcodeData</a></div><div class="brief "><a data-name="1139161177%2FProperties%2F-876852797" anchor-label="barcodeData" id="1139161177%2FProperties%2F-876852797" data-filterable-set=":CortexDecoderLibrary:dokkaHtml/testFixturesRelease"></a><a href="index.html#1139161177%2FProperties%2F-876852797">barcodeData</a> defines the decoded barcode data converted in String using UTF8 encoding.</div></div></div>
+              </div>
+            </div>
+          </div>
+        </div>
+<a data-name="636896647%2FProperties%2F-876852797" anchor-label="codewords" id="636896647%2FProperties%2F-876852797" data-filterable-set=":CortexDecoderLibrary:dokkaHtml/testFixturesRelease"></a>
+        <div class="table-row" data-filterable-current=":CortexDecoderLibrary:dokkaHtml/testFixturesRelease" data-filterable-set=":CortexDecoderLibrary:dokkaHtml/testFixturesRelease">
+          <div class="main-subrow keyValue ">
+            <div class=""><span class="inline-flex">
+                <div><a href="index.html#636896647%2FProperties%2F-876852797"><span><span>codewords</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="636896647%2FProperties%2F-876852797"></span>
+                  <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                </span></span></div>
+            <div>
+              <div class="title">
+                <div class="platform-hinted " data-platform-hinted="data-platform-hinted" data-togglable="Properties"><div class="content sourceset-dependent-content" data-active="" data-togglable=":CortexDecoderLibrary:dokkaHtml/testFixturesRelease"><a data-name="636896647%2FProperties%2F-876852797" anchor-label="codewords" id="636896647%2FProperties%2F-876852797" data-filterable-set=":CortexDecoderLibrary:dokkaHtml/testFixturesRelease"></a><div class="symbol monospace block"><span class="token keyword">public </span><span class="token keyword"></span><a href="-c-d-codewords/index.html">CDResult.CDCodewords</a> <a href="index.html#636896647%2FProperties%2F-876852797">codewords</a></div><div class="brief "><a data-name="636896647%2FProperties%2F-876852797" anchor-label="codewords" id="636896647%2FProperties%2F-876852797" data-filterable-set=":CortexDecoderLibrary:dokkaHtml/testFixturesRelease"></a><a href="index.html#636896647%2FProperties%2F-876852797">codewords</a> defines the CDCodewords object that contains fields providing details of barcode error correction.</div></div></div>
+              </div>
+            </div>
+          </div>
+        </div>
+<a data-name="-1531099172%2FProperties%2F-876852797" anchor-label="decodeTime" id="-1531099172%2FProperties%2F-876852797" data-filterable-set=":CortexDecoderLibrary:dokkaHtml/testFixturesRelease"></a>
+        <div class="table-row" data-filterable-current=":CortexDecoderLibrary:dokkaHtml/testFixturesRelease" data-filterable-set=":CortexDecoderLibrary:dokkaHtml/testFixturesRelease">
+          <div class="main-subrow keyValue ">
+            <div class=""><span class="inline-flex">
+                <div><a href="index.html#-1531099172%2FProperties%2F-876852797"><span>decode</span><wbr></wbr><span><span>Time</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1531099172%2FProperties%2F-876852797"></span>
+                  <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                </span></span></div>
+            <div>
+              <div class="title">
+                <div class="platform-hinted " data-platform-hinted="data-platform-hinted" data-togglable="Properties"><div class="content sourceset-dependent-content" data-active="" data-togglable=":CortexDecoderLibrary:dokkaHtml/testFixturesRelease"><a data-name="-1531099172%2FProperties%2F-876852797" anchor-label="decodeTime" id="-1531099172%2FProperties%2F-876852797" data-filterable-set=":CortexDecoderLibrary:dokkaHtml/testFixturesRelease"></a><div class="symbol monospace block"><span class="token keyword">public </span><span class="token keyword"></span>int <a href="index.html#-1531099172%2FProperties%2F-876852797">decodeTime</a></div><div class="brief "><a data-name="-1531099172%2FProperties%2F-876852797" anchor-label="decodeTime" id="-1531099172%2FProperties%2F-876852797" data-filterable-set=":CortexDecoderLibrary:dokkaHtml/testFixturesRelease"></a><a href="index.html#-1531099172%2FProperties%2F-876852797">decodeTime</a> defines the decode time for each barcode.</div></div></div>
+              </div>
+            </div>
+          </div>
+        </div>
+<a data-name="378173853%2FProperties%2F-876852797" anchor-label="errorCorrection" id="378173853%2FProperties%2F-876852797" data-filterable-set=":CortexDecoderLibrary:dokkaHtml/testFixturesRelease"></a>
+        <div class="table-row" data-filterable-current=":CortexDecoderLibrary:dokkaHtml/testFixturesRelease" data-filterable-set=":CortexDecoderLibrary:dokkaHtml/testFixturesRelease">
+          <div class="main-subrow keyValue ">
+            <div class=""><span class="inline-flex">
+                <div><a href="index.html#378173853%2FProperties%2F-876852797"><span>error</span><wbr></wbr><span><span>Correction</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="378173853%2FProperties%2F-876852797"></span>
+                  <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                </span></span></div>
+            <div>
+              <div class="title">
+                <div class="platform-hinted " data-platform-hinted="data-platform-hinted" data-togglable="Properties"><div class="content sourceset-dependent-content" data-active="" data-togglable=":CortexDecoderLibrary:dokkaHtml/testFixturesRelease"><a data-name="378173853%2FProperties%2F-876852797" anchor-label="errorCorrection" id="378173853%2FProperties%2F-876852797" data-filterable-set=":CortexDecoderLibrary:dokkaHtml/testFixturesRelease"></a><div class="symbol monospace block"><span class="token keyword">public </span><span class="token keyword"></span><a href="https://developer.android.com/reference/kotlin/java/lang/String.html">String</a> <a href="index.html#378173853%2FProperties%2F-876852797">errorCorrection</a></div><div class="brief "><a data-name="378173853%2FProperties%2F-876852797" anchor-label="errorCorrection" id="378173853%2FProperties%2F-876852797" data-filterable-set=":CortexDecoderLibrary:dokkaHtml/testFixturesRelease"></a><a href="index.html#378173853%2FProperties%2F-876852797">errorCorrection</a> defines the error correction levels and only supported for 2D barcodes.</div></div></div>
+              </div>
+            </div>
+          </div>
+        </div>
+<a data-name="689582921%2FProperties%2F-876852797" anchor-label="frameCoordinates" id="689582921%2FProperties%2F-876852797" data-filterable-set=":CortexDecoderLibrary:dokkaHtml/testFixturesRelease"></a>
+        <div class="table-row" data-filterable-current=":CortexDecoderLibrary:dokkaHtml/testFixturesRelease" data-filterable-set=":CortexDecoderLibrary:dokkaHtml/testFixturesRelease">
+          <div class="main-subrow keyValue ">
+            <div class=""><span class="inline-flex">
+                <div><a href="index.html#689582921%2FProperties%2F-876852797"><span>frame</span><wbr></wbr><span><span>Coordinates</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="689582921%2FProperties%2F-876852797"></span>
+                  <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                </span></span></div>
+            <div>
+              <div class="title">
+                <div class="platform-hinted " data-platform-hinted="data-platform-hinted" data-togglable="Properties"><div class="content sourceset-dependent-content" data-active="" data-togglable=":CortexDecoderLibrary:dokkaHtml/testFixturesRelease"><a data-name="689582921%2FProperties%2F-876852797" anchor-label="frameCoordinates" id="689582921%2FProperties%2F-876852797" data-filterable-set=":CortexDecoderLibrary:dokkaHtml/testFixturesRelease"></a><div class="symbol monospace block"><span class="token keyword">public </span><span class="token keyword"></span><a href="https://developer.android.com/reference/kotlin/java/util/List.html">List</a><span class="token operator">&lt;</span><a href="https://developer.android.com/reference/kotlin/android/graphics/PointF.html">PointF</a><span class="token operator">&gt;</span> <a href="index.html#689582921%2FProperties%2F-876852797">frameCoordinates</a></div><div class="brief "><a data-name="689582921%2FProperties%2F-876852797" anchor-label="frameCoordinates" id="689582921%2FProperties%2F-876852797" data-filterable-set=":CortexDecoderLibrary:dokkaHtml/testFixturesRelease"></a><a href="index.html#689582921%2FProperties%2F-876852797">frameCoordinates</a> defines the barcode Coordinates of the decoded barcode based on image pixels of raw frame.</div></div></div>
+              </div>
+            </div>
+          </div>
+        </div>
+<a data-name="-678398744%2FProperties%2F-876852797" anchor-label="image" id="-678398744%2FProperties%2F-876852797" data-filterable-set=":CortexDecoderLibrary:dokkaHtml/testFixturesRelease"></a>
+        <div class="table-row" data-filterable-current=":CortexDecoderLibrary:dokkaHtml/testFixturesRelease" data-filterable-set=":CortexDecoderLibrary:dokkaHtml/testFixturesRelease">
+          <div class="main-subrow keyValue ">
+            <div class=""><span class="inline-flex">
+                <div><a href="index.html#-678398744%2FProperties%2F-876852797"><span><span>image</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-678398744%2FProperties%2F-876852797"></span>
+                  <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                </span></span></div>
+            <div>
+              <div class="title">
+                <div class="platform-hinted " data-platform-hinted="data-platform-hinted" data-togglable="Properties"><div class="content sourceset-dependent-content" data-active="" data-togglable=":CortexDecoderLibrary:dokkaHtml/testFixturesRelease"><a data-name="-678398744%2FProperties%2F-876852797" anchor-label="image" id="-678398744%2FProperties%2F-876852797" data-filterable-set=":CortexDecoderLibrary:dokkaHtml/testFixturesRelease"></a><div class="symbol monospace block"><span class="token keyword">public </span><span class="token keyword"></span><a href="https://developer.android.com/reference/kotlin/java/nio/ByteBuffer.html">ByteBuffer</a> <a href="index.html#-678398744%2FProperties%2F-876852797">image</a></div><div class="brief "><a data-name="-678398744%2FProperties%2F-876852797" anchor-label="image" id="-678398744%2FProperties%2F-876852797" data-filterable-set=":CortexDecoderLibrary:dokkaHtml/testFixturesRelease"></a><a href="index.html#-678398744%2FProperties%2F-876852797">image</a> represents grayscale bytebuffer of decoded barcode image when API <a href="../-c-d-camera/set-decoded-image-retrieval.html">setDecodedImageRetrieval</a> is enabled.</div></div></div>
+              </div>
+            </div>
+          </div>
+        </div>
+<a data-name="-1585784511%2FProperties%2F-876852797" anchor-label="imageHeight" id="-1585784511%2FProperties%2F-876852797" data-filterable-set=":CortexDecoderLibrary:dokkaHtml/testFixturesRelease"></a>
+        <div class="table-row" data-filterable-current=":CortexDecoderLibrary:dokkaHtml/testFixturesRelease" data-filterable-set=":CortexDecoderLibrary:dokkaHtml/testFixturesRelease">
+          <div class="main-subrow keyValue ">
+            <div class=""><span class="inline-flex">
+                <div><a href="index.html#-1585784511%2FProperties%2F-876852797"><span>image</span><wbr></wbr><span><span>Height</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1585784511%2FProperties%2F-876852797"></span>
+                  <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                </span></span></div>
+            <div>
+              <div class="title">
+                <div class="platform-hinted " data-platform-hinted="data-platform-hinted" data-togglable="Properties"><div class="content sourceset-dependent-content" data-active="" data-togglable=":CortexDecoderLibrary:dokkaHtml/testFixturesRelease"><a data-name="-1585784511%2FProperties%2F-876852797" anchor-label="imageHeight" id="-1585784511%2FProperties%2F-876852797" data-filterable-set=":CortexDecoderLibrary:dokkaHtml/testFixturesRelease"></a><div class="symbol monospace block"><span class="token keyword">public </span><span class="token keyword"></span>int <a href="index.html#-1585784511%2FProperties%2F-876852797">imageHeight</a></div></div></div>
+              </div>
+            </div>
+          </div>
+        </div>
+<a data-name="-1535566196%2FProperties%2F-876852797" anchor-label="imageWidth" id="-1535566196%2FProperties%2F-876852797" data-filterable-set=":CortexDecoderLibrary:dokkaHtml/testFixturesRelease"></a>
+        <div class="table-row" data-filterable-current=":CortexDecoderLibrary:dokkaHtml/testFixturesRelease" data-filterable-set=":CortexDecoderLibrary:dokkaHtml/testFixturesRelease">
+          <div class="main-subrow keyValue ">
+            <div class=""><span class="inline-flex">
+                <div><a href="index.html#-1535566196%2FProperties%2F-876852797"><span>image</span><wbr></wbr><span><span>Width</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1535566196%2FProperties%2F-876852797"></span>
+                  <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                </span></span></div>
+            <div>
+              <div class="title">
+                <div class="platform-hinted " data-platform-hinted="data-platform-hinted" data-togglable="Properties"><div class="content sourceset-dependent-content" data-active="" data-togglable=":CortexDecoderLibrary:dokkaHtml/testFixturesRelease"><a data-name="-1535566196%2FProperties%2F-876852797" anchor-label="imageWidth" id="-1535566196%2FProperties%2F-876852797" data-filterable-set=":CortexDecoderLibrary:dokkaHtml/testFixturesRelease"></a><div class="symbol monospace block"><span class="token keyword">public </span><span class="token keyword"></span>int <a href="index.html#-1535566196%2FProperties%2F-876852797">imageWidth</a></div></div></div>
+              </div>
+            </div>
+          </div>
+        </div>
+<a data-name="1487714789%2FProperties%2F-876852797" anchor-label="licenseResult" id="1487714789%2FProperties%2F-876852797" data-filterable-set=":CortexDecoderLibrary:dokkaHtml/testFixturesRelease"></a>
+        <div class="table-row" data-filterable-current=":CortexDecoderLibrary:dokkaHtml/testFixturesRelease" data-filterable-set=":CortexDecoderLibrary:dokkaHtml/testFixturesRelease">
+          <div class="main-subrow keyValue ">
+            <div class=""><span class="inline-flex">
+                <div><a href="index.html#1487714789%2FProperties%2F-876852797"><span>license</span><wbr></wbr><span><span>Result</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1487714789%2FProperties%2F-876852797"></span>
+                  <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                </span></span></div>
+            <div>
+              <div class="title">
+                <div class="platform-hinted " data-platform-hinted="data-platform-hinted" data-togglable="Properties"><div class="content sourceset-dependent-content" data-active="" data-togglable=":CortexDecoderLibrary:dokkaHtml/testFixturesRelease"><a data-name="1487714789%2FProperties%2F-876852797" anchor-label="licenseResult" id="1487714789%2FProperties%2F-876852797" data-filterable-set=":CortexDecoderLibrary:dokkaHtml/testFixturesRelease"></a><div class="symbol monospace block"><span class="token keyword">public </span><span class="token keyword"></span><a href="../-c-d-license-result/index.html">CDLicenseResult</a> <a href="index.html#1487714789%2FProperties%2F-876852797">licenseResult</a></div><div class="brief "><a data-name="1487714789%2FProperties%2F-876852797" anchor-label="licenseResult" id="1487714789%2FProperties%2F-876852797" data-filterable-set=":CortexDecoderLibrary:dokkaHtml/testFixturesRelease"></a><a href="index.html#1487714789%2FProperties%2F-876852797">licenseResult</a> defines the <a href="../-c-d-license-result/index.html">CDLicenseResult</a> object that contains license activation result.</div></div></div>
+              </div>
+            </div>
+          </div>
+        </div>
+<a data-name="459576184%2FProperties%2F-876852797" anchor-label="mirror" id="459576184%2FProperties%2F-876852797" data-filterable-set=":CortexDecoderLibrary:dokkaHtml/testFixturesRelease"></a>
+        <div class="table-row" data-filterable-current=":CortexDecoderLibrary:dokkaHtml/testFixturesRelease" data-filterable-set=":CortexDecoderLibrary:dokkaHtml/testFixturesRelease">
+          <div class="main-subrow keyValue ">
+            <div class=""><span class="inline-flex">
+                <div><a href="index.html#459576184%2FProperties%2F-876852797"><span><span>mirror</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="459576184%2FProperties%2F-876852797"></span>
+                  <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                </span></span></div>
+            <div>
+              <div class="title">
+                <div class="platform-hinted " data-platform-hinted="data-platform-hinted" data-togglable="Properties"><div class="content sourceset-dependent-content" data-active="" data-togglable=":CortexDecoderLibrary:dokkaHtml/testFixturesRelease"><a data-name="459576184%2FProperties%2F-876852797" anchor-label="mirror" id="459576184%2FProperties%2F-876852797" data-filterable-set=":CortexDecoderLibrary:dokkaHtml/testFixturesRelease"></a><div class="symbol monospace block"><span class="token keyword">public </span><span class="token keyword"></span>boolean <a href="index.html#459576184%2FProperties%2F-876852797">mirror</a></div><div class="brief "><a data-name="459576184%2FProperties%2F-876852797" anchor-label="mirror" id="459576184%2FProperties%2F-876852797" data-filterable-set=":CortexDecoderLibrary:dokkaHtml/testFixturesRelease"></a><a href="index.html#459576184%2FProperties%2F-876852797">mirror</a> defines mirror value for decoded barcode, when true barcode is a mirror image and supported symbologies are DataMatrix, Aztec, QRCode, DotCode and GridMatrix.</div></div></div>
+              </div>
+            </div>
+          </div>
+        </div>
+<a data-name="1295812023%2FProperties%2F-876852797" anchor-label="numOfColumns" id="1295812023%2FProperties%2F-876852797" data-filterable-set=":CortexDecoderLibrary:dokkaHtml/testFixturesRelease"></a>
+        <div class="table-row" data-filterable-current=":CortexDecoderLibrary:dokkaHtml/testFixturesRelease" data-filterable-set=":CortexDecoderLibrary:dokkaHtml/testFixturesRelease">
+          <div class="main-subrow keyValue ">
+            <div class=""><span class="inline-flex">
+                <div><a href="index.html#1295812023%2FProperties%2F-876852797"><span>num</span><wbr></wbr><span>Of</span><wbr></wbr><span><span>Columns</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1295812023%2FProperties%2F-876852797"></span>
+                  <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                </span></span></div>
+            <div>
+              <div class="title">
+                <div class="platform-hinted " data-platform-hinted="data-platform-hinted" data-togglable="Properties"><div class="content sourceset-dependent-content" data-active="" data-togglable=":CortexDecoderLibrary:dokkaHtml/testFixturesRelease"><a data-name="1295812023%2FProperties%2F-876852797" anchor-label="numOfColumns" id="1295812023%2FProperties%2F-876852797" data-filterable-set=":CortexDecoderLibrary:dokkaHtml/testFixturesRelease"></a><div class="symbol monospace block"><span class="token keyword">public </span><span class="token keyword"></span>int <a href="index.html#1295812023%2FProperties%2F-876852797">numOfColumns</a></div><div class="brief "><a data-name="1295812023%2FProperties%2F-876852797" anchor-label="numOfColumns" id="1295812023%2FProperties%2F-876852797" data-filterable-set=":CortexDecoderLibrary:dokkaHtml/testFixturesRelease"></a><a href="index.html#1295812023%2FProperties%2F-876852797">numOfColumns</a> defines number of columns of a decoded barcode and only supported for 2D barcodes.</div></div></div>
+              </div>
+            </div>
+          </div>
+        </div>
+<a data-name="1814037549%2FProperties%2F-876852797" anchor-label="numOfRows" id="1814037549%2FProperties%2F-876852797" data-filterable-set=":CortexDecoderLibrary:dokkaHtml/testFixturesRelease"></a>
+        <div class="table-row" data-filterable-current=":CortexDecoderLibrary:dokkaHtml/testFixturesRelease" data-filterable-set=":CortexDecoderLibrary:dokkaHtml/testFixturesRelease">
+          <div class="main-subrow keyValue ">
+            <div class=""><span class="inline-flex">
+                <div><a href="index.html#1814037549%2FProperties%2F-876852797"><span>num</span><wbr></wbr><span>Of</span><wbr></wbr><span><span>Rows</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1814037549%2FProperties%2F-876852797"></span>
+                  <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                </span></span></div>
+            <div>
+              <div class="title">
+                <div class="platform-hinted " data-platform-hinted="data-platform-hinted" data-togglable="Properties"><div class="content sourceset-dependent-content" data-active="" data-togglable=":CortexDecoderLibrary:dokkaHtml/testFixturesRelease"><a data-name="1814037549%2FProperties%2F-876852797" anchor-label="numOfRows" id="1814037549%2FProperties%2F-876852797" data-filterable-set=":CortexDecoderLibrary:dokkaHtml/testFixturesRelease"></a><div class="symbol monospace block"><span class="token keyword">public </span><span class="token keyword"></span>int <a href="index.html#1814037549%2FProperties%2F-876852797">numOfRows</a></div><div class="brief "><a data-name="1814037549%2FProperties%2F-876852797" anchor-label="numOfRows" id="1814037549%2FProperties%2F-876852797" data-filterable-set=":CortexDecoderLibrary:dokkaHtml/testFixturesRelease"></a><a href="index.html#1814037549%2FProperties%2F-876852797">numOfRows</a> defines number of rows of a decoded barcode and only supported for 2D barcodes.</div></div></div>
+              </div>
+            </div>
+          </div>
+        </div>
+<a data-name="-357664473%2FProperties%2F-876852797" anchor-label="polarity" id="-357664473%2FProperties%2F-876852797" data-filterable-set=":CortexDecoderLibrary:dokkaHtml/testFixturesRelease"></a>
+        <div class="table-row" data-filterable-current=":CortexDecoderLibrary:dokkaHtml/testFixturesRelease" data-filterable-set=":CortexDecoderLibrary:dokkaHtml/testFixturesRelease">
+          <div class="main-subrow keyValue ">
+            <div class=""><span class="inline-flex">
+                <div><a href="index.html#-357664473%2FProperties%2F-876852797"><span><span>polarity</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-357664473%2FProperties%2F-876852797"></span>
+                  <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                </span></span></div>
+            <div>
+              <div class="title">
+                <div class="platform-hinted " data-platform-hinted="data-platform-hinted" data-togglable="Properties"><div class="content sourceset-dependent-content" data-active="" data-togglable=":CortexDecoderLibrary:dokkaHtml/testFixturesRelease"><a data-name="-357664473%2FProperties%2F-876852797" anchor-label="polarity" id="-357664473%2FProperties%2F-876852797" data-filterable-set=":CortexDecoderLibrary:dokkaHtml/testFixturesRelease"></a><div class="symbol monospace block"><span class="token keyword">public </span><span class="token keyword"></span><a href="-c-d-polarity/index.html">CDResult.CDPolarity</a> <a href="index.html#-357664473%2FProperties%2F-876852797">polarity</a></div><div class="brief "><a data-name="-357664473%2FProperties%2F-876852797" anchor-label="polarity" id="-357664473%2FProperties%2F-876852797" data-filterable-set=":CortexDecoderLibrary:dokkaHtml/testFixturesRelease"></a><a href="index.html#-357664473%2FProperties%2F-876852797">polarity</a> defines the polarity of a decoded barcode, supported symbologies are DataMatrix, Aztec, QRCode, DotCode and GridMatrix.</div></div></div>
+              </div>
+            </div>
+          </div>
+        </div>
+<a data-name="874282404%2FProperties%2F-876852797" anchor-label="previewCoordinates" id="874282404%2FProperties%2F-876852797" data-filterable-set=":CortexDecoderLibrary:dokkaHtml/testFixturesRelease"></a>
+        <div class="table-row" data-filterable-current=":CortexDecoderLibrary:dokkaHtml/testFixturesRelease" data-filterable-set=":CortexDecoderLibrary:dokkaHtml/testFixturesRelease">
+          <div class="main-subrow keyValue ">
+            <div class=""><span class="inline-flex">
+                <div><a href="index.html#874282404%2FProperties%2F-876852797"><span>preview</span><wbr></wbr><span><span>Coordinates</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="874282404%2FProperties%2F-876852797"></span>
+                  <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                </span></span></div>
+            <div>
+              <div class="title">
+                <div class="platform-hinted " data-platform-hinted="data-platform-hinted" data-togglable="Properties"><div class="content sourceset-dependent-content" data-active="" data-togglable=":CortexDecoderLibrary:dokkaHtml/testFixturesRelease"><a data-name="874282404%2FProperties%2F-876852797" anchor-label="previewCoordinates" id="874282404%2FProperties%2F-876852797" data-filterable-set=":CortexDecoderLibrary:dokkaHtml/testFixturesRelease"></a><div class="symbol monospace block"><span class="token keyword">public </span><span class="token keyword"></span><a href="https://developer.android.com/reference/kotlin/java/util/List.html">List</a><span class="token operator">&lt;</span><a href="https://developer.android.com/reference/kotlin/android/graphics/PointF.html">PointF</a><span class="token operator">&gt;</span> <a href="index.html#874282404%2FProperties%2F-876852797">previewCoordinates</a></div><div class="brief "><a data-name="874282404%2FProperties%2F-876852797" anchor-label="previewCoordinates" id="874282404%2FProperties%2F-876852797" data-filterable-set=":CortexDecoderLibrary:dokkaHtml/testFixturesRelease"></a><a href="index.html#874282404%2FProperties%2F-876852797">previewCoordinates</a> defines the barcode Coordinates of the decoded barcode based on preview view used by screen display.</div></div></div>
+              </div>
+            </div>
+          </div>
+        </div>
+<a data-name="1831087281%2FProperties%2F-876852797" anchor-label="rawData" id="1831087281%2FProperties%2F-876852797" data-filterable-set=":CortexDecoderLibrary:dokkaHtml/testFixturesRelease"></a>
+        <div class="table-row" data-filterable-current=":CortexDecoderLibrary:dokkaHtml/testFixturesRelease" data-filterable-set=":CortexDecoderLibrary:dokkaHtml/testFixturesRelease">
+          <div class="main-subrow keyValue ">
+            <div class=""><span class="inline-flex">
+                <div><a href="index.html#1831087281%2FProperties%2F-876852797"><span>raw</span><wbr></wbr><span><span>Data</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1831087281%2FProperties%2F-876852797"></span>
+                  <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                </span></span></div>
+            <div>
+              <div class="title">
+                <div class="platform-hinted " data-platform-hinted="data-platform-hinted" data-togglable="Properties"><div class="content sourceset-dependent-content" data-active="" data-togglable=":CortexDecoderLibrary:dokkaHtml/testFixturesRelease"><a data-name="1831087281%2FProperties%2F-876852797" anchor-label="rawData" id="1831087281%2FProperties%2F-876852797" data-filterable-set=":CortexDecoderLibrary:dokkaHtml/testFixturesRelease"></a><div class="symbol monospace block"><span class="token keyword">public </span><span class="token keyword"></span><span data-unresolved-link="kotlin/Array///PointingToDeclaration/">Array</span><span class="token operator">&lt;</span>byte<span class="token operator">&gt;</span> <a href="index.html#1831087281%2FProperties%2F-876852797">rawData</a></div><div class="brief "><a data-name="1831087281%2FProperties%2F-876852797" anchor-label="rawData" id="1831087281%2FProperties%2F-876852797" data-filterable-set=":CortexDecoderLibrary:dokkaHtml/testFixturesRelease"></a><a href="index.html#1831087281%2FProperties%2F-876852797">rawData</a> defines raw barcode data which can be converted into any other string encoding format like ASCII, ShiftJS, etc.</div></div></div>
+              </div>
+            </div>
+          </div>
+        </div>
+<a data-name="146195510%2FProperties%2F-876852797" anchor-label="rawSymbology" id="146195510%2FProperties%2F-876852797" data-filterable-set=":CortexDecoderLibrary:dokkaHtml/testFixturesRelease"></a>
+        <div class="table-row" data-filterable-current=":CortexDecoderLibrary:dokkaHtml/testFixturesRelease" data-filterable-set=":CortexDecoderLibrary:dokkaHtml/testFixturesRelease">
+          <div class="main-subrow keyValue ">
+            <div class=""><span class="inline-flex">
+                <div><a href="index.html#146195510%2FProperties%2F-876852797"><span>raw</span><wbr></wbr><span><span>Symbology</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="146195510%2FProperties%2F-876852797"></span>
+                  <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                </span></span></div>
+            <div>
+              <div class="title">
+                <div class="platform-hinted " data-platform-hinted="data-platform-hinted" data-togglable="Properties"><div class="content sourceset-dependent-content" data-active="" data-togglable=":CortexDecoderLibrary:dokkaHtml/testFixturesRelease"><a data-name="146195510%2FProperties%2F-876852797" anchor-label="rawSymbology" id="146195510%2FProperties%2F-876852797" data-filterable-set=":CortexDecoderLibrary:dokkaHtml/testFixturesRelease"></a><div class="symbol monospace block"><span class="token keyword">public </span><span class="token keyword"></span><a href="../-c-d-symbology/-c-d-symbology-type/index.html">CDSymbology.CDSymbologyType</a> <a href="index.html#146195510%2FProperties%2F-876852797">rawSymbology</a></div><div class="brief "><a data-name="146195510%2FProperties%2F-876852797" anchor-label="rawSymbology" id="146195510%2FProperties%2F-876852797" data-filterable-set=":CortexDecoderLibrary:dokkaHtml/testFixturesRelease"></a><a href="index.html#146195510%2FProperties%2F-876852797">rawSymbology</a> defines the symbology type of decoded barcode represented as an enum.</div></div></div>
+              </div>
+            </div>
+          </div>
+        </div>
+<a data-name="492322469%2FProperties%2F-876852797" anchor-label="status" id="492322469%2FProperties%2F-876852797" data-filterable-set=":CortexDecoderLibrary:dokkaHtml/testFixturesRelease"></a>
+        <div class="table-row" data-filterable-current=":CortexDecoderLibrary:dokkaHtml/testFixturesRelease" data-filterable-set=":CortexDecoderLibrary:dokkaHtml/testFixturesRelease">
+          <div class="main-subrow keyValue ">
+            <div class=""><span class="inline-flex">
+                <div><a href="index.html#492322469%2FProperties%2F-876852797"><span><span>status</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="492322469%2FProperties%2F-876852797"></span>
+                  <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                </span></span></div>
+            <div>
+              <div class="title">
+                <div class="platform-hinted " data-platform-hinted="data-platform-hinted" data-togglable="Properties"><div class="content sourceset-dependent-content" data-active="" data-togglable=":CortexDecoderLibrary:dokkaHtml/testFixturesRelease"><a data-name="492322469%2FProperties%2F-876852797" anchor-label="status" id="492322469%2FProperties%2F-876852797" data-filterable-set=":CortexDecoderLibrary:dokkaHtml/testFixturesRelease"></a><div class="symbol monospace block"><span class="token keyword">public </span><span class="token keyword"></span><a href="-c-d-decode-status/index.html">CDResult.CDDecodeStatus</a> <a href="index.html#492322469%2FProperties%2F-876852797">status</a></div><div class="brief "><a data-name="492322469%2FProperties%2F-876852797" anchor-label="status" id="492322469%2FProperties%2F-876852797" data-filterable-set=":CortexDecoderLibrary:dokkaHtml/testFixturesRelease"></a><a href="index.html#492322469%2FProperties%2F-876852797">status</a> defines the status of the frame or image whether it’s decoded/failed or any other error.</div></div></div>
+              </div>
+            </div>
+          </div>
+        </div>
+<a data-name="-1155757400%2FProperties%2F-876852797" anchor-label="symbolModifier" id="-1155757400%2FProperties%2F-876852797" data-filterable-set=":CortexDecoderLibrary:dokkaHtml/testFixturesRelease"></a>
+        <div class="table-row" data-filterable-current=":CortexDecoderLibrary:dokkaHtml/testFixturesRelease" data-filterable-set=":CortexDecoderLibrary:dokkaHtml/testFixturesRelease">
+          <div class="main-subrow keyValue ">
+            <div class=""><span class="inline-flex">
+                <div><a href="index.html#-1155757400%2FProperties%2F-876852797"><span>symbol</span><wbr></wbr><span><span>Modifier</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1155757400%2FProperties%2F-876852797"></span>
+                  <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                </span></span></div>
+            <div>
+              <div class="title">
+                <div class="platform-hinted " data-platform-hinted="data-platform-hinted" data-togglable="Properties"><div class="content sourceset-dependent-content" data-active="" data-togglable=":CortexDecoderLibrary:dokkaHtml/testFixturesRelease"><a data-name="-1155757400%2FProperties%2F-876852797" anchor-label="symbolModifier" id="-1155757400%2FProperties%2F-876852797" data-filterable-set=":CortexDecoderLibrary:dokkaHtml/testFixturesRelease"></a><div class="symbol monospace block"><span class="token keyword">public </span><span class="token keyword"></span>int <a href="index.html#-1155757400%2FProperties%2F-876852797">symbolModifier</a></div><div class="brief "><a data-name="-1155757400%2FProperties%2F-876852797" anchor-label="symbolModifier" id="-1155757400%2FProperties%2F-876852797" data-filterable-set=":CortexDecoderLibrary:dokkaHtml/testFixturesRelease"></a><a href="index.html#-1155757400%2FProperties%2F-876852797">symbolModifier</a> defines an ASCII value of the single modifier character.</div></div></div>
+              </div>
+            </div>
+          </div>
+        </div>
+<a data-name="-795162118%2FProperties%2F-876852797" anchor-label="symbology" id="-795162118%2FProperties%2F-876852797" data-filterable-set=":CortexDecoderLibrary:dokkaHtml/testFixturesRelease"></a>
+        <div class="table-row" data-filterable-current=":CortexDecoderLibrary:dokkaHtml/testFixturesRelease" data-filterable-set=":CortexDecoderLibrary:dokkaHtml/testFixturesRelease">
+          <div class="main-subrow keyValue ">
+            <div class=""><span class="inline-flex">
+                <div><a href="index.html#-795162118%2FProperties%2F-876852797"><span><span>symbology</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-795162118%2FProperties%2F-876852797"></span>
+                  <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                </span></span></div>
+            <div>
+              <div class="title">
+                <div class="platform-hinted " data-platform-hinted="data-platform-hinted" data-togglable="Properties"><div class="content sourceset-dependent-content" data-active="" data-togglable=":CortexDecoderLibrary:dokkaHtml/testFixturesRelease"><a data-name="-795162118%2FProperties%2F-876852797" anchor-label="symbology" id="-795162118%2FProperties%2F-876852797" data-filterable-set=":CortexDecoderLibrary:dokkaHtml/testFixturesRelease"></a><div class="symbol monospace block"><span class="token keyword">public </span><span class="token keyword"></span><a href="https://developer.android.com/reference/kotlin/java/lang/String.html">String</a> <a href="index.html#-795162118%2FProperties%2F-876852797">symbology</a></div><div class="brief "><a data-name="-795162118%2FProperties%2F-876852797" anchor-label="symbology" id="-795162118%2FProperties%2F-876852797" data-filterable-set=":CortexDecoderLibrary:dokkaHtml/testFixturesRelease"></a><a href="index.html#-795162118%2FProperties%2F-876852797">symbology</a> defines the symbology type of decoded barcode in String format.</div></div></div>
+              </div>
+            </div>
+          </div>
+        </div>
+<a data-name="383339268%2FProperties%2F-876852797" anchor-label="totalDecodeTime" id="383339268%2FProperties%2F-876852797" data-filterable-set=":CortexDecoderLibrary:dokkaHtml/testFixturesRelease"></a>
+        <div class="table-row" data-filterable-current=":CortexDecoderLibrary:dokkaHtml/testFixturesRelease" data-filterable-set=":CortexDecoderLibrary:dokkaHtml/testFixturesRelease">
+          <div class="main-subrow keyValue ">
+            <div class=""><span class="inline-flex">
+                <div><a href="index.html#383339268%2FProperties%2F-876852797"><span>total</span><wbr></wbr><span>Decode</span><wbr></wbr><span><span>Time</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="383339268%2FProperties%2F-876852797"></span>
+                  <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                </span></span></div>
+            <div>
+              <div class="title">
+                <div class="platform-hinted " data-platform-hinted="data-platform-hinted" data-togglable="Properties"><div class="content sourceset-dependent-content" data-active="" data-togglable=":CortexDecoderLibrary:dokkaHtml/testFixturesRelease"><a data-name="383339268%2FProperties%2F-876852797" anchor-label="totalDecodeTime" id="383339268%2FProperties%2F-876852797" data-filterable-set=":CortexDecoderLibrary:dokkaHtml/testFixturesRelease"></a><div class="symbol monospace block"><span class="token keyword">public </span><span class="token keyword"></span>int <a href="index.html#383339268%2FProperties%2F-876852797">totalDecodeTime</a></div><div class="brief "><a data-name="383339268%2FProperties%2F-876852797" anchor-label="totalDecodeTime" id="383339268%2FProperties%2F-876852797" data-filterable-set=":CortexDecoderLibrary:dokkaHtml/testFixturesRelease"></a><a href="index.html#383339268%2FProperties%2F-876852797">totalDecodeTime</a> represents total time spent decoding all barcodes.</div></div></div>
+              </div>
+            </div>
+          </div>
+        </div>
+<a data-name="1448111388%2FProperties%2F-876852797" anchor-label="verification" id="1448111388%2FProperties%2F-876852797" data-filterable-set=":CortexDecoderLibrary:dokkaHtml/testFixturesRelease"></a>
+        <div class="table-row" data-filterable-current=":CortexDecoderLibrary:dokkaHtml/testFixturesRelease" data-filterable-set=":CortexDecoderLibrary:dokkaHtml/testFixturesRelease">
+          <div class="main-subrow keyValue ">
+            <div class=""><span class="inline-flex">
+                <div><a href="index.html#1448111388%2FProperties%2F-876852797"><span><span>verification</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1448111388%2FProperties%2F-876852797"></span>
+                  <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                </span></span></div>
+            <div>
+              <div class="title">
+                <div class="platform-hinted " data-platform-hinted="data-platform-hinted" data-togglable="Properties"><div class="content sourceset-dependent-content" data-active="" data-togglable=":CortexDecoderLibrary:dokkaHtml/testFixturesRelease"><a data-name="1448111388%2FProperties%2F-876852797" anchor-label="verification" id="1448111388%2FProperties%2F-876852797" data-filterable-set=":CortexDecoderLibrary:dokkaHtml/testFixturesRelease"></a><div class="symbol monospace block"><span class="token keyword">public </span><span class="token keyword"></span><a href="-c-d-verification/index.html">CDResult.CDVerification</a> <a href="index.html#1448111388%2FProperties%2F-876852797">verification</a></div><div class="brief "><a data-name="1448111388%2FProperties%2F-876852797" anchor-label="verification" id="1448111388%2FProperties%2F-876852797" data-filterable-set=":CortexDecoderLibrary:dokkaHtml/testFixturesRelease"></a><a href="index.html#1448111388%2FProperties%2F-876852797">verification</a> defines the CDVerification object that contains fields providing details of barcode verification.</div></div></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      <div class="footer">
+        <span class="go-to-top-icon"><a href="#content" id="go-to-top-link"></a></span><span>Copyright (c) 2014-2023 The Code Corporation. All rights reserved.</span><span
+                class="pull-right"><span>Generated by </span><a
+                href="https://github.com/Kotlin/dokka"><span>dokka</span><span class="padded-icon"></span></a></span>
+      </div>
+    </div>
+</div>
+</body>
+</html>

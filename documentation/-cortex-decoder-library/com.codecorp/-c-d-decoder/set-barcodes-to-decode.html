@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1" charset="UTF-8">
+    <title>setBarcodesToDecode</title>
+    <link href="../../../images/logo-icon.svg" rel="icon" type="image/svg">
+    <script>var pathToRoot = "../../../";</script>
+    <script>const storage = localStorage.getItem("dokka-dark-mode")
+    if (storage == null) {
+        const osDarkSchemePreferred = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches
+        if (osDarkSchemePreferred === true) {
+            document.getElementsByTagName("html")[0].classList.add("theme-dark")
+        }
+    } else {
+        const savedDarkMode = JSON.parse(storage)
+        if(savedDarkMode === true) {
+            document.getElementsByTagName("html")[0].classList.add("theme-dark")
+        }
+    }
+    </script>
+<script type="text/javascript" src="../../../scripts/sourceset_dependencies.js" async="async"></script>
+<link href="../../../styles/style.css" rel="Stylesheet">
+<link href="../../../styles/jetbrains-mono.css" rel="Stylesheet">
+<link href="../../../styles/main.css" rel="Stylesheet">
+<link href="../../../styles/prism.css" rel="Stylesheet">
+<link href="../../../styles/logo-styles.css" rel="Stylesheet">
+<script type="text/javascript" src="../../../scripts/clipboard.js" async="async"></script>
+<script type="text/javascript" src="../../../scripts/navigation-loader.js" async="async"></script>
+<script type="text/javascript" src="../../../scripts/platform-content-handler.js" async="async"></script>
+<script type="text/javascript" src="../../../scripts/main.js" defer="defer"></script>
+<script type="text/javascript" src="../../../scripts/prism.js" async="async"></script>
+<script type="text/javascript" src="../../../scripts/symbol-parameters-wrapper_deferred.js" defer="defer"></script>
+<link href="../../../images/logo-icon.svg">
+<link href="../../../styles/logo-styles.css" rel="Stylesheet">
+</head>
+<body>
+<div class="navigation-wrapper" id="navigation-wrapper">
+    <div id="leftToggler"><span class="icon-toggler"></span></div>
+    <div class="library-name">
+            <a href="../../../index.html">
+                    <span>CortexDecoderLibrary</span>
+            </a>
+    </div>
+    <div>
+Version: 4.12.0    </div>
+    <div class="pull-right d-flex">
+        <button id="theme-toggle-button"><span id="theme-toggle"></span></button>
+        <div id="searchBar"></div>
+    </div>
+</div>
+<div id="container">
+    <div id="leftColumn">
+        <div id="sideMenu"></div>
+    </div>
+    <div id="main">
+<div class="main-content" id="content" pageIds="CortexDecoderLibrary::com.codecorp/CDDecoder/setBarcodesToDecode/#int#boolean/PointingToDeclaration//-876852797">
+  <div class="breadcrumbs"><a href="../../../index.html">CortexDecoderLibrary</a><span class="delimiter">/</span><a href="../index.html">com.codecorp</a><span class="delimiter">/</span><a href="index.html">CDDecoder</a><span class="delimiter">/</span><span class="current">setBarcodesToDecode</span></div>
+  <div class="cover ">
+    <h1 class="cover"><span>set</span><wbr></wbr><span>Barcodes</span><wbr></wbr><span>To</span><wbr></wbr><span><span>Decode</span></span></h1>
+  </div>
+  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":CortexDecoderLibrary:dokkaHtml/testFixturesRelease"><div class="symbol monospace block"><span class="token keyword">public </span><span class="token keyword"></span>int <a href="set-barcodes-to-decode.html"><span class="token function">setBarcodesToDecode</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter "><span class="token keyword"></span>int num<span class="token punctuation">, </span></span><span class="parameter "><span class="token keyword"></span>boolean enable</span></span><span class="token punctuation">)</span></div><p class="paragraph">setBarcodesToDecode tells the decoder how many barcodes to try and decode from an image. </p><p class="paragraph">By default, the number of barcodes to decode is 1 and the maximum is 20. If Multicode is licensed, it will increase the maximum number of barcodes to 256.</p><p class="paragraph">The second parameter of type Boolean defines whether this method must decode the exact preset number of barcodes(True value will scan exact amount of barcodes and False value will scan any amount of barcodes from 1 till the preset number of barcodes)</p><div class="sample-container"><pre><code class="block lang-kotlin" theme="idea"><strong>Sample usage</strong><div class="sample-container"><pre><code class="block lang-kotlin" theme="idea">// Set decoder to decode exactly 10 barcodes
+CDDecoder.shared.setBarcodesToDecode(10, true);
+
+// Set decoder to decode up to 10
+CDDecoder.shared.setBarcodesToDecode(10, false);
+</code></pre><span class="top-right-position"><span class="copy-icon"></span><div class="copy-popup-wrapper popup-to-left"><span class="copy-popup-icon"></span><span>Content copied to clipboard</span></div></span></div></code></pre><span class="top-right-position"><span class="copy-icon"></span><div class="copy-popup-wrapper popup-to-left"><span class="copy-popup-icon"></span><span>Content copied to clipboard</span></div></span></div><h4 class="">See also</h4><div data-togglable="See also"><div class="table" data-togglable="See also"><div class="table-row" data-filterable-current=":CortexDecoderLibrary:dokkaHtml/testFixturesRelease" data-filterable-set=":CortexDecoderLibrary:dokkaHtml/testFixturesRelease"><div class="main-subrow keyValue WithExtraAttributes"><div class=""><span class="inline-flex"><div><a href="get-barcodes-to-decode.html"><span>get</span><wbr></wbr><span>Barcodes</span><wbr></wbr><span>To</span><wbr></wbr><span><span>Decode()</span></span></a></div></span></div><div><div class="title"><div data-togglable="See also"><p class="paragraph">getBarcodesToDecode can be used to get the current number of barcodes to decode.</p></div></div></div></div></div><div class="table-row" data-filterable-current=":CortexDecoderLibrary:dokkaHtml/testFixturesRelease" data-filterable-set=":CortexDecoderLibrary:dokkaHtml/testFixturesRelease"><div class="main-subrow keyValue WithExtraAttributes"><div class=""><span class="inline-flex"><div><a href="get-decode-exactly.html"><span>get</span><wbr></wbr><span>Decode</span><wbr></wbr><span><span>Exactly()</span></span></a></div></span></div><div><div class="title"><div data-togglable="See also"><p class="paragraph">getDecodeExactly can be used to get the current setting if decoder must decode the exact preset number of barcodes.</p></div></div></div></div></div></div></div><h4 class="">Parameters</h4><div data-togglable="Parameters"><div class="table" data-togglable="Parameters"><div class="table-row" data-filterable-current=":CortexDecoderLibrary:dokkaHtml/testFixturesRelease" data-filterable-set=":CortexDecoderLibrary:dokkaHtml/testFixturesRelease"><div class="main-subrow keyValue WithExtraAttributes"><div class=""><span class="inline-flex"><div><u><span><span>num</span></span></u></div></span></div><div><div class="title"><div data-togglable="Parameters"><p class="paragraph">integer value that defaults to 1. Can specify up to 20. If Multicode is licensed, it will increase the maximum number of barcodes to 256.</p></div></div></div></div></div></div></div></div></div>
+</div>
+      <div class="footer">
+        <span class="go-to-top-icon"><a href="#content" id="go-to-top-link"></a></span><span>Copyright (c) 2014-2023 The Code Corporation. All rights reserved.</span><span
+                class="pull-right"><span>Generated by </span><a
+                href="https://github.com/Kotlin/dokka"><span>dokka</span><span class="padded-icon"></span></a></span>
+      </div>
+    </div>
+</div>
+</body>
+</html>
