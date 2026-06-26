@@ -6,6 +6,20 @@ title: Android SDK
 
 ---
 
+## Version 4.13.0
+
+### New Features
+- None
+
+### Improvements & Fixes
+- None
+
+### API Changes
+- New API: `refreshPreviewView()` refreshes the camera preview surface for cross-platform environments where views may remount.
+- New API: `setCameraWithRefreshView(CDCamera.CDCameraLens cdCameraLens)` switches the active camera lens for cross-platform environments.
+
+---
+
 ## Version 4.12.0
 
 ### New Features

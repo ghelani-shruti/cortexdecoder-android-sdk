@@ -95,6 +95,7 @@ $dokka.location:com.codecorp/CDCamera/isFixedFocusRangeSupported/#float/Pointing
 $dokka.location:com.codecorp/CDCamera/isFocusSupported/#com.codecorp.CDCamera.CDFocus/PointingToDeclaration/-cortex-decoder-library/com.codecorp/-c-d-camera/is-focus-supported.html
 $dokka.location:com.codecorp/CDCamera/isResolutionSupported/#com.codecorp.CDCamera.CDResolution/PointingToDeclaration/-cortex-decoder-library/com.codecorp/-c-d-camera/is-resolution-supported.html
 $dokka.location:com.codecorp/CDCamera/isTorchSupported/#/PointingToDeclaration/-cortex-decoder-library/com.codecorp/-c-d-camera/is-torch-supported.html
+$dokka.location:com.codecorp/CDCamera/refreshPreviewView/#/PointingToDeclaration/-cortex-decoder-library/com.codecorp/-c-d-camera/refresh-preview-view.html
 $dokka.location:com.codecorp/CDCamera/setAGCDelay/#int/PointingToDeclaration/-cortex-decoder-library/com.codecorp/-c-d-camera/set-a-g-c-delay.html
 $dokka.location:com.codecorp/CDCamera/setAGCExposureTime/#long/PointingToDeclaration/-cortex-decoder-library/com.codecorp/-c-d-camera/set-a-g-c-exposure-time.html
 $dokka.location:com.codecorp/CDCamera/setAGCIso/#float/PointingToDeclaration/-cortex-decoder-library/com.codecorp/-c-d-camera/set-a-g-c-iso.html
@@ -105,6 +106,7 @@ $dokka.location:com.codecorp/CDCamera/setAutoFocusAndInterval/#boolean/PointingT
 $dokka.location:com.codecorp/CDCamera/setCamera/#com.codecorp.CDCamera.CDCameraLens/PointingToDeclaration/-cortex-decoder-library/com.codecorp/-c-d-camera/set-camera.html
 $dokka.location:com.codecorp/CDCamera/setCameraAPI/#com.codecorp.CDCamera.CDCameraAPI/PointingToDeclaration/-cortex-decoder-library/com.codecorp/-c-d-camera/set-camera-a-p-i.html
 $dokka.location:com.codecorp/CDCamera/setCameraPosition/#com.codecorp.CDCamera.CDPosition/PointingToDeclaration/-cortex-decoder-library/com.codecorp/-c-d-camera/set-camera-position.html
+$dokka.location:com.codecorp/CDCamera/setCameraWithRefreshView/#com.codecorp.CDCamera.CDCameraLens/PointingToDeclaration/-cortex-decoder-library/com.codecorp/-c-d-camera/set-camera-with-refresh-view.html
 $dokka.location:com.codecorp/CDCamera/setDecodedImageRetrieval/#boolean/PointingToDeclaration/-cortex-decoder-library/com.codecorp/-c-d-camera/set-decoded-image-retrieval.html
 $dokka.location:com.codecorp/CDCamera/setExposureCompensation/#int/PointingToDeclaration/-cortex-decoder-library/com.codecorp/-c-d-camera/set-exposure-compensation.html
 $dokka.location:com.codecorp/CDCamera/setFixedFocusRange/#float/PointingToDeclaration/-cortex-decoder-library/com.codecorp/-c-d-camera/set-fixed-focus-range.html
