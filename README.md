@@ -203,7 +203,8 @@ To see these APIs in action, follow these steps to build and run the sample appl
 | [camera_scan_sample_java]( https://github.com/Brady-Scanning-and-Vision-SDKs/cortexdecoder-android-sdk/tree/main/android-sdk-samples/camera_scan_sample_java) | Real-time scanning via device camera | 
 | [camera_scan_sample_kotlin](https://github.com/Brady-Scanning-and-Vision-SDKs/cortexdecoder-android-sdk/tree/main/android-sdk-samples/camera_scan_sample_kotlin) | Real-time scanning via device camera |
 | [image_scan_sample_kotlin](https://github.com/Brady-Scanning-and-Vision-SDKs/cortexdecoder-android-sdk/tree/main/android-sdk-samples/image_scan_sample_kotlin) | Decoding from static file uploads |
-| [multiframe_decode_sample_kotlin](https://github.com/Brady-Scanning-and-Vision-SDKs/cortexdecoder-android-sdk/tree/main/android-sdk-samples/multiframe_decode_sample_kotlin) | Scanning multiple unique barcodes using multiple frames | |
+| [multiframe_decode_sample_kotlin](https://github.com/Brady-Scanning-and-Vision-SDKs/cortexdecoder-android-sdk/tree/main/android-sdk-samples/multiframe_decode_sample_kotlin) | Scanning multiple unique barcodes using multiple frames |
+| [region_of_interest_sample_java](https://github.com/Brady-Scanning-and-Vision-SDKs/cortexdecoder-android-sdk/tree/main/android-sdk-samples/region_of_interest_sample_java) | Decoding only within a custom-defined Region of Interest |
 | [region_of_interest_sample_kotlin](https://github.com/Brady-Scanning-and-Vision-SDKs/cortexdecoder-android-sdk/tree/main/android-sdk-samples/region_of_interest_sample_kotlin) | Decoding only within a custom-defined Region of Interest |
 | [touch_to_scan_sample_kotlin](https://github.com/Brady-Scanning-and-Vision-SDKs/cortexdecoder-android-sdk/tree/main/android-sdk-samples/touch_to_scan_sample_kotlin) | On-demand decoding via screen-touch interaction |
 
