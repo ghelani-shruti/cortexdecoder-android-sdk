@@ -1,7 +1,7 @@
 # CortexDecoder Android SDK - Samples & Reference
 
 [![Platform](https://img.shields.io/badge/Platform-%20Android%20-blue.svg)]()
-[![SDK Version](https://img.shields.io/badge/SDK-v4.13.0-success.svg)]()
+[![SDK Version](https://img.shields.io/badge/SDK-v4.13.1-success.svg)]()
 [![API Docs](https://img.shields.io/badge/API_Docs-NexGen-blueviolet.svg)](https://nexgen-docs.netlify.app/)
 [![Support](https://img.shields.io/badge/Support-Brady_Enterprise-orange.svg)](mailto:software.support@codecorp.com)
 

@@ -6,6 +6,19 @@ title: Android SDK
 
 ---
 
+## Version 4.13.1
+
+### New Features
+- None
+
+### Improvements & Fixes
+- Bug fixes for Codabar API `setSendStartStopCharacters()`
+
+### API Changes
+- None
+
+---
+
 ## Version 4.13.0
 
 ### New Features
